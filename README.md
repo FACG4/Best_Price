@@ -8,6 +8,7 @@ People often waste a lot of time shopping and are unable to make truly informed 
 ## User stories:
 * users are able to view deals on women and men clothing.
 * users are able to view details on each item they desire, including prices, selling shop, location, and item size.
+* users can use a filter feature to quickly find what they need according to price, size, and shop location.
 * users are able to create accounts and save their favorite items so they can view them later.
 * Various users are able to comfortably use the website, including people with disabilities and dexterity challenges (responsive and accessible).
 
