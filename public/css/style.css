@@ -1,0 +1,94 @@
+html, body {
+  margin :0px;
+  padding : 0px;
+  width:100%;
+  height :100%
+}
+
+.mainDiv {
+  display:flex ;
+  flex-direction: column ;
+  flex-wrap: wrap;
+}
+
+.parentDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color:rgba(255, 0, 0, 0.5);
+  width:100%;
+  height: 40px;
+}
+
+.formDiv {
+  margin-right: 40px;
+  margin-top:10px;
+}
+
+.Tweet {
+  margin-left: 40px;
+  margin-top: -5px ;
+}
+
+.input1 {
+  margin-right: 30px;
+}
+.navbarContaier {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  width:100%;
+  height: 60px;
+  background-color: #ddd
+}
+
+.navImg .logo {
+  width: 80px;
+  margin-left:20px;
+  margin-top: 10px
+
+}
+
+.navItems {
+  justify-content: center;
+  width : 90%;
+}
+
+.navItems ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  width :80%
+}
+
+.navItems ul li {
+  padding: 10px;
+  margin:20px
+
+}
+
+.sliderDeals {
+  margin-top: 20px;
+  width :100%;
+  height:400px;
+  background: #ddd
+}
+
+slider {
+  display : block ;
+  width:100%;
+  height: 400px;
+  overflow:hidden;
+  position:absolute;
+  background: black
+}
+
+slider > * {
+  position: absolute;
+  display:block;
+  width:100%;
+  height: 100%;
+  background: #aaa;
+}
