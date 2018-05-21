@@ -1,13 +1,13 @@
 BEGIN;
-DROP TABLE IF EXISTS users, items,views,saved CASCADE;
 
+DROP TABLE IF EXISTS users, items, saved CASCADE;
 
  CREATE TABLE users(
    id SERIAL PRIMARY KEY,
    user_name VARCHAR(60) UNIQUE NOT NULL,
    first_name VARCHAR(50) NOT NULL,
    last_name VARCHAR(50) NOT NULL,
-   password VARCHAR NOT NULL CHECK(char_length(password)>8),
+   password VARCHAR NOT NULL,
    email VARCHAR(50) UNIQUE NOT NULL
  );
 
