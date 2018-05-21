@@ -1,6 +1,6 @@
-const express = require('express');
-
-const app = express();
+const app = require('./app');
 
 
-module.exports = app;
+app.listen(app.get('port'), () => {
+  console.log('app is running on port', app.get('port'));
+});

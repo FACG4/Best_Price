@@ -1,5 +1,8 @@
-const app = require('.');
 
-const port = app.set('port', 3000);
+const express = require('express');
 
-app.listen(port);
+const app = express();
+
+app.set('port', process.env.PORT || 3000);
+
+module.exports = app;
