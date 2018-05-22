@@ -266,7 +266,6 @@ html, body {
   font-size: 18px;
   text-decoration: none;
   color:black;
-  display: block;
   padding: 18px;
   font-weight: bold;
   text-align: center;
@@ -288,4 +287,8 @@ html, body {
 
 .navImg {
   align-items: center;
+}
+.
+p{
+  z-index: 1000000000
 }

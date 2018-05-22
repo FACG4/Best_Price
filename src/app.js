@@ -1,6 +1,5 @@
 
 const express = require('express');
-<<<<<<< HEAD
 const exphbs = require('express-handlebars');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -25,13 +24,8 @@ app.engine(
 // app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.set('port', process.env.PORT || 4000);
-console.log(router);
+// console.log(router);
 app.use(router);
-=======
 
-const app = express();
-
-app.set('port', process.env.PORT || 3000);
->>>>>>> f76cd50adbe020c04e7a64afe54dc7cf04090736
 
 module.exports = app;
