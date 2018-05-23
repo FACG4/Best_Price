@@ -1,0 +1,23 @@
+<section class="main">
+<div class="filter" id="filter">
+  <div class="filter-input">
+    <input type="checkbox" class="filter-price" id="filter-price">
+    <input type="checkbox" class="filter-size" id="filter-size">
+    <input type="checkbox" class="filter-location" id="filter-location">
+  </div>
+
+  <div class="filter-label">
+    <label for="filter-price">Price</label>
+    <label for="filter-size">Size</label>
+    <label for="filter-location">Shop Location</label>
+  </div>
+</div>
+
+<div class="item-list" id="item-list">
+  {{#each result}}
+    <img src = "{{this.img}}"></img>
+  {{/each}}
+</div>
+
+</section>
+<script src="./js/categories.js"></script>
