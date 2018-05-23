@@ -1,9 +1,7 @@
-const connection = require('./db_connection');
-const fs = require ('fs');
+const query = require('./queries/query');
+const fs = require('fs');
+const path = require('path');
 
+const sql = fs.readFileSync(path.join(__dirname, 'db_build.sql')).toString();
 
-const sql=fs.readFileSync(`${__dirname}/db_build.sql`).toString();
-connection.query(sql,(err,res)=>{
-  if(err) throw new Error(err);
-  console.log('fsf');
-})
+query(sql).then().catch(err => console.log(err));

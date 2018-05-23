@@ -5,6 +5,9 @@ body {
   font-family: Arial;
 }
 
+.clear {
+  clear: both;
+}
 .header {
   overflow: hidden;
   background-color: #f1f1f1;
@@ -73,9 +76,27 @@ li a:hover {
 }
 #bloc1, #bloc2
 {
-    display:inline;
+    display:inline-block;
+    position: relative;
+}
+#bloc1 > a, #bloc2 > a {
+  display: block;
 }
 
+#bloc1 span , #bloc2 span {
+    position: absolute;
+    bottom: 4px;
+    z-index: 99;
+    width: 100%;
+    left: 0;
+    padding: 20px;
+    background: #33333385;
+    color: #fff;
+  }
+
+#bloc2 span {
+  right: 0;
+}
 img{
   width: 500px;
   length:400px;
@@ -118,14 +139,24 @@ img{
 }
 
 /* Caption text */
-.text {
+.discount--home {
   color: #f2f2f2;
+  background-color: #e801019c;
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
-  width: 100%;
+  width: 200px;
   text-align: center;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: 64px;
+  left: 19px;
+  vertical-align: middle;
+  line-height: 175px;
+  font-size: 30px;
+
 }
 
 /* Number text (1/3 etc) */
@@ -160,12 +191,14 @@ img{
 }
 
 .contactus{
-background:gray;
-max-width: 1000px;
-position: relative;
-margin: auto;
-display: flex;
-flex-direction:column;
+  background: #333333;
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+      padding: 20px 0;
 }
 .userInfo{
   display: flex;
@@ -193,8 +226,9 @@ flex-direction:column;
   justify-content:center;
 }
 .btn button{
+  background: white;
   border-radius: 8px;
-  color: blue;
+  color: black;
 }
 @-webkit-keyframes fade {
   from {opacity: .4}
@@ -229,4 +263,19 @@ flex-direction:column;
   .header-right {
     float: none;
   }
+}
+
+
+/* model--pop */
+.hidden  {
+  display: none;
+}
+.model--pop {
+  width: 60vw;
+  height: 60vh;
+  background: #fff;
+  position: fixed;
+  z-index: 99999;
+  top: 20%;
+  left: 20%;
 }
