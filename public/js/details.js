@@ -1,3 +1,7 @@
+const image = document.querySelectorAll('.image');
+console.log(image[0].currentSrc);
 
-function myFunction() {
-    var x = document.getElementById("myImg").src;
+image.forEach((e) => {
+  const imgList =e.src;
+  console.log(imgList);
+})
