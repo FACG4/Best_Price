@@ -138,7 +138,7 @@ img{
   background-color: rgba(0,0,0,0.8);
 }
 
-/* Caption text */
+/* Caption discount */
 .discount--home {
   color: #f2f2f2;
   background-color: #e801019c;
@@ -157,15 +157,6 @@ img{
   line-height: 175px;
   font-size: 30px;
 
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
 }
 
 .dot {
@@ -267,7 +258,7 @@ img{
 
 
 /* model--pop */
-.hidden  {
+/* .hidden  {
   display: none;
 }
 .model--pop {
@@ -278,4 +269,4 @@ img{
   z-index: 99999;
   top: 20%;
   left: 20%;
-}
+} */

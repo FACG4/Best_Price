@@ -1,4 +1,4 @@
-BEGIN;
+6BEGIN;
 DROP TABLE IF EXISTS users, items,saved,disconut CASCADE;
  CREATE TABLE users(
    id SERIAL PRIMARY KEY,
