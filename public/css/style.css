@@ -5,69 +5,6 @@ html, body {
   height :100%
 }
 
-.mainDiv {
-  display:flex ;
-  flex-direction: column ;
-  flex-wrap: wrap;
-}
-
-.parentDiv {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color:rgba(255, 0, 0, 0.5);
-  width:100%;
-  height: 40px;
-}
-
-.formDiv {
-  margin-right: 40px;
-  margin-top:10px;
-}
-
-.Tweet {
-  margin-left: 40px;
-  margin-top: -5px ;
-}
-
-.input1 {
-  margin-right: 30px;
-}
-.navbarContaier {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-  width:100%;
-  height: 60px;
-  background-color: #ddd
-}
-
-.navImg .logo {
-  width: 80px;
-  margin-left:20px;
-  margin-top: 10px
-
-}
-
-.navItems {
-  justify-content: center;
-  width : 90%;
-}
-
-.navItems ul {
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  width :80%
-}
-
-.navItems ul li {
-  padding: 10px;
-  margin:20px
-
-}
 
 * {box-sizing:border-box}
 
@@ -81,7 +18,8 @@ html, body {
 
 /* Hide the images by default */
 .mySlides {
-    display: none;
+    /* display: none; */
+    position: absolute;
 }
 
 /* Next & previous buttons */
@@ -90,7 +28,7 @@ html, body {
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: -22px;
+  margin-top: 250px;
   padding: 16px;
   color: white;
   font-weight: bold;
@@ -173,21 +111,45 @@ html, body {
   display: flex;
   flex-direction: row;
   flex-wrap :wrap;
- justify-content: space-around;
+  justify-content: space-evenly;
+  padding: 0 9%;
+  margin-top: 10px
 }
 
 .catagory {
   display: flex;
   flex-wrap:wrap;
-  height: 600px;
-
+  height: 520px;
 }
 
 .cataImg {
   margin-top: 20px;
   align-items:center;
+  height: 490px;
+  width: 490px;
+  margin-top: 10PX;
+  justify-content:center;
+  border-radius: 15px;
+  border-width: bold;
 
 }
+
+@media only screen and (max-width: 508px) {
+    .cataImg{
+        width:400px;
+        height: 490px;
+        margin-top:0px
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .cataImg{
+        width:400px;
+        height: 440px;
+        margin-top:0px
+    }
+}
+
 .footer {
   display: flex;
   justify-content: center;
@@ -242,17 +204,34 @@ html, body {
   background-color: #fafafa;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 .containernav {
    display: flex;
-  width: 1140px;
+  width: 100%;
   height: 100px;
    align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
- .navItems {
   justify-content: center;
+  flex-direction: row;
+
+}
+
+
+@media all and (max-width: 545px) {
+navItems {
+  font-size: 10px;
+}
+
+}
+
+
+
+ .navItems {
+   width: 90%;
+  justify-content: flex-start;
+  margin-left: 2PX;
+  position: relative;
+
 }
 
 .navItems ul {
@@ -260,6 +239,9 @@ html, body {
   list-style-type: none;
   justify-content: center;
   padding: 0px;
+  flex-direction: row;
+  position: absolute;
+  top: -26px;
 }
 
 .navItems a {
@@ -278,18 +260,93 @@ html, body {
 
 .navbar .logo {
   width: 100px;
-  height: 100px;
-  margin-left: 2px;
+  height: 90px;
+  margin-left: 0px;
+
 }
 
-.navbar .star {
-  width: 30px;
-}
 
 .navImg {
   align-items: center;
 }
-.
-p{
-  z-index: 1000000000
+
+.discount {
+color: #f2f2f2;
+background-color: #aaa;
+padding: 8px 8px;
+position: absolute;
+text-align: center;
+width: 200px;
+height: 200px;
+border-radius: 60%;
+position: absolute;
+vertical-align: middle;
+line-height: 175px;
+font-size: 30px;
+margin : 20px 0px 8px 19px;
+
+}
+
+@media all and (max-width: 666px) {
+.discount {
+  width: 150px;
+  height: 150px;
+  border-radius: 60%;
+  position: absolute;
+  vertical-align: middle;
+  line-height: 120px;
+  font-size: 30px;
+}
+
+}
+
+@media all and (max-width: 450px) {
+.discount {
+  width: 100px;
+  height: 100px;
+  border-radius: 60%;
+  position: absolute;
+  vertical-align: middle;
+  line-height: 80px;
+  font-size: 20px;
+}
+
+}
+
+@media all and (max-width: 450px) {
+.discount {
+
+  width: 50px;
+  height: 50px;
+  border-radius: 60%;
+  position: absolute;
+  vertical-align: middle;
+  line-height: 30px;
+  font-size: 10px;
+  margin : 10px 0px 8px 19px;
+}
+
+}
+
+@media all and (max-width: 200px) {
+.discount {
+
+  width: 30px;
+  height: 30px;
+  border-radius: 60%;
+  position: absolute;
+  vertical-align: middle;
+  line-height: 15px;
+  font-size: 5px;
+  margin : 10px 0px 8px 19px;
+}
+
+}
+
+
+
+.discountText {
+  z-index: 1;
+  color: white;
+  margin-top: 5px
 }
