@@ -1,0 +1,335 @@
+html, body {
+  margin :0px;
+  padding : 0px;
+  width:100%;
+  height :100%
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.mainDiv {
+  display:flex ;
+  flex-direction: column ;
+  flex-wrap: wrap;
+}
+
+.parentDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color:rgba(255, 0, 0, 0.5);
+  width:100%;
+  height: 40px;
+}
+
+.formDiv {
+  margin-right: 40px;
+  margin-top:10px;
+}
+
+.Tweet {
+  margin-left: 40px;
+  margin-top: -5px ;
+}
+
+.input1 {
+  margin-right: 30px;
+}
+.navbarContaier {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  width:100%;
+  height: 60px;
+  background-color: #ddd
+}
+
+.navImg .logo {
+  width: 80px;
+  margin-left:20px;
+  margin-top: 10px
+
+}
+
+.navItems {
+  justify-content: center;
+  width : 90%;
+}
+
+.navItems ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  width :80%
+}
+
+.navItems ul li {
+  padding: 10px;
+  margin:20px
+
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin :auto;
+  margin-top: 0px;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.sliderImg {
+  width: 100%;
+  height: 600px;
+}
+
+.catagoriesContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap :wrap;
+ justify-content: space-around;
+}
+
+.catagory {
+  display: flex;
+  flex-wrap:wrap;
+  height: 600px;
+
+}
+
+.cataImg {
+  margin-top: 20px;
+  align-items:center;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: black;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  margin-top:5PX;
+  font-family: Roboto;
+  font-size: 14px;
+  color: white;
+
+}
+
+.header {
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.headerForm {
+  display: flex;
+  align-items: center;
+  align: left;
+  margin-right: 10px;
+}
+
+.input {
+  background-color:black;
+  border: 0;
+  color: white;
+  font-family: Roboto;
+  font-style: Regular;
+  font-size: 16px;
+}
+
+.input:hover {
+  font-size: 17px;
+  color: #eae4ac;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+   height: 100px;
+  background-color: #fafafa;
+  align-items: center;
+  justify-content: center;
+}
+.containernav {
+   display: flex;
+  width: 1140px;
+  height: 100px;
+   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+ .navItems {
+  justify-content: center;
+}
+
+.navItems ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  padding: 0px;
+}
+
+.navItems a {
+  font-family: Roboto;
+  font-size: 18px;
+  text-decoration: none;
+  color:black;
+  padding: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.navItems a:hover {
+  text-decoration: underline;
+}
+
+.navbar .logo {
+  width: 100px;
+  height: 100px;
+  margin-left: 2px;
+}
+
+.navbar .star {
+  width: 30px;
+}
+
+.navImg {
+  align-items: center;
+}
+.
+p{
+  z-index: 1000000000
+}
+
+.center-align {
+  position: absolute;
+  margin:auto;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+
+//////////////////////////////////////////////////////
+/*
+.image-container{
+  height:200px;
+  width:150px;
+  background:aqua;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  background-image:url(https://cdn3.foap.com/images/3be5c2c0c81545b6a5746f5014fa97c5/web_preview.jpg);
+  background-size:cover;
+}
+.views{
+  height:50px;
+  width:150px;
+  background:transparent;
+  display: flex:FLEX;
+
+}
+.image{
+  height:45px;
+  width:30px;
+  background:YELLOW;
+  margin: 2.5px 3.5px ;
+} */
+////////////////////////////////////////////////////////////////////////

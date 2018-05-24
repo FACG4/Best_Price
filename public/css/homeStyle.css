@@ -236,7 +236,7 @@ img{
     text-align: center;
    list-style-type: none;
    margin: 0;
-   padding: 0;
+   padding: 9px;
    overflow: hidden;
    background-color: #333;
 }
@@ -255,18 +255,3 @@ img{
     float: none;
   }
 }
-
-
-/* model--pop */
-/* .hidden  {
-  display: none;
-}
-.model--pop {
-  width: 60vw;
-  height: 60vh;
-  background: #fff;
-  position: fixed;
-  z-index: 99999;
-  top: 20%;
-  left: 20%;
-} */

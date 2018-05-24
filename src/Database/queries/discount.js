@@ -6,7 +6,7 @@ const disconutValue = (req,cb) =>{
   connection.query(sql,(dbConnectionError,result)=>{
     if (dbConnectionError) return cb(dbConnectionError)
     cb(null,result.rows)
-    console.log(result.rows,'result from Database');
+    // console.log(result.rows,'result from Database');
 
   })
 }
