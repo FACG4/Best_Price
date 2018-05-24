@@ -7,6 +7,7 @@ const viewDetails = (itemId, cb) => {
   };
   dbconnection.query(sql, (err, details) => {
     if (err) return cb(err);
+    console.log(details.rows,'data');
     return cb(null, details.rows);
   });
 };
