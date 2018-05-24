@@ -1,17 +1,17 @@
 const express = require('express');
-const handlebars = require('express-handlebars');
+const exphbs = require('express-handlebars');
 const path = require('path');
 const bodyParser = require('body-parser');
-const controllers = require('./controllers');
+const cookieParser = require('cookie-parser');
+const router = require('./controllers/index');
 
 const app = express();
 
-app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
-
+app.set('view engine', 'hbs');
 app.engine(
   'hbs',
-  handlebars({
+  exphbs({
     extname: 'hbs',
     layoutsDir: path.join(__dirname, 'views', 'layouts'),
     partialsDir: path.join(__dirname, 'views', 'partials'),
@@ -20,10 +20,8 @@ app.engine(
 );
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(controllers);
+app.set('port', process.env.PORT || 4000);
+app.use(router);
 
-app.set('port', process.env.PORT || 3000);
 
 module.exports = app;

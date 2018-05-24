@@ -1,6 +1,7 @@
 .main {
   display: flex;
 }
+
 .filter {
   margin: 50px 20px 50px 20px;
   background-color: aqua;
@@ -30,4 +31,9 @@
 
 .filter input {
   margin: 10px;
+}
+
+.item-list img {
+  width: 400px;
+  height: 600px;
 }

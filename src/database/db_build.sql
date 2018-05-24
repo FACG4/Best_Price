@@ -34,12 +34,12 @@ CREATE TABLE saved (
 );
 
 INSERT INTO items (name, shop_name, size, price, location, gender, class, img) VALUES
-('pants', 'shop', 'large', '120', 'Gaza', 'M', 'Shirt', 'https://i.imgur.com/aRLCUMR.jpg'),
-('pants', 'shop', 'large', '120', 'Gaza', 'M', 'Shirt', 'https://i.imgur.com/aRLCUMR.jpg'),
-('pants', 'shop', 'large', '120', 'Gaza', 'M', 'Shirt', 'https://i.imgur.com/aRLCUMR.jpg'),
-('pants', 'shop', 'large', '120', 'Gaza', 'M', 'Shirt', 'https://i.imgur.com/aRLCUMR.jpg'),
-('pants', 'shop', 'large', '120', 'Gaza', 'M', 'Shirt', 'https://i.imgur.com/aRLCUMR.jpg'),
-('pants', 'shop', 'large', '120', 'Gaza', 'M', 'Shirt', 'https://i.imgur.com/aRLCUMR.jpg'),
-('pants', 'shop', 'large', '120', 'Gaza', 'M', 'Shirt', 'https://i.imgur.com/aRLCUMR.jpg');
+('pants', 'shop', 'small', '145', 'Gaza', 'M', 'Shirt', 'https://i.imgur.com/aRLCUMR.jpg'),
+('pants', 'shop', 'x-large', '20', 'Gaza', 'F', 'Shirt', 'https://i.imgur.com/1xF9y4D.jpg'),
+('pants', 'shop', 'large', '200', 'Gaza', 'F', 'Shirt', 'https://i.imgur.com/VUflJaV.png'),
+('pants', 'shop', 'medium', '70', 'Gaza', 'M', 'Shirt', 'https://i.imgur.com/94NEXyy.jpg'),
+('pants', 'shop', 'large', '70', 'Gaza', 'M', 'Shirt', 'https://i.imgur.com/aRLCUMR.jpg'),
+('pants', 'shop', 'large', '45', 'Gaza', 'F', 'Shirt', 'https://i.imgur.com/aRLCUMR.jpg'),
+('pants', 'shop', 'large', '120', 'Gaza', 'F', 'Shirt', 'https://i.imgur.com/aRLCUMR.jpg');
 
 COMMIT;

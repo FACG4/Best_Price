@@ -1,0 +1,55 @@
+<section class="main">
+<div class="filter" id="filter">
+  <div class="price-filter">
+    <input type="checkbox" class="box" id="low">
+    <input type="checkbox" class="box" id="mid">
+    <input type="checkbox" class="box" id="high">
+  </div>
+
+  <div class="price-labels">
+    <label for="low">0-50 NIS</label>
+    <label for="mid">50-100 NIS</label>
+    <label for="high">100+</label>
+  </div>
+
+  <div class="size-filter">
+    <input type="checkbox" class="box" id="x-large">
+    <input type="checkbox" class="box" id="large">
+    <input type="checkbox" class="box" id="medium">
+    <input type="checkbox" class="box" id="small">
+  </div>
+
+  <div class="size-labels">
+    <label for="x-large">X-Large</label>
+    <label for="large">Large</label>
+    <label for="Medium">Medium</label>
+    <label for="small">Small</label>
+  </div>
+
+  <div class="location-filter">
+    <input type="checkbox" class="box" id="north">
+    <input type="checkbox" class="box" id="gaza">
+    <input type="checkbox" class="box" id="middle">
+    <input type="checkbox" class="box" id="khan">
+    <input type="checkbox" class="box" id="rafah">
+  </div>
+
+  <div class="location-labels">
+    <label for="north">North Gaza</label>
+    <label for="gaza">Gaza</label>
+    <label for="middle">Middle Governorate</label>
+    <label for="khan">Khan Younis</label>
+    <label for="rafah">Rafah</label>
+  </div>
+
+</div>
+
+<div class="item-list" id="item-list">
+  {{#each result}}
+    <img src = "{{this.img}}"></img>
+  {{/each}}
+</div>
+
+</section>
+<script src="./js/filter_elements.js"></script>
+<script src="./js/categories.js"></script>
