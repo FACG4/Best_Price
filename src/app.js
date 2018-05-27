@@ -1,4 +1,3 @@
-
 const express = require('express');
 const exphbs = require('express-handlebars');
 const path = require('path');
@@ -19,12 +18,11 @@ app.engine(
     defaultLayout: 'main',
   }),
 );
-// app.use(cookieParser());
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: false }));
+
 app.use(express.static(path.join(__dirname, '..', 'public')));
-app.set('port', process.env.PORT || 3000);
-// console.log(router);
+app.set('port', process.env.PORT || 4000);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(router);
 
 

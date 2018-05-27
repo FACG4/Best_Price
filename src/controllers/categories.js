@@ -1,38 +1,11 @@
-// const TorsoProduct = require('./../Database/queries/categories');
-//
-// exports.getcata = (req,res)=>{
-//   const class1 = req.params.class;
-//   console.log(class1);
-//    TorsoProduct(class1,(err,torsoData)=>{
-//      if(err){
-//         return res.status(404);
-//      }
-//      return res.render('catagories', {torsoData})
-//    });
-// }
-//
-// // exports.getlegs = (req,res) => {
-// // legProduct(req,(err,legsData) => {
-// //   if (err){
-// //     return res.status(404);
-// //   }
-// //   return res.render('categories', {legsData})
-// // });
-// // };
-// // exports.getshose = (req,res) => {
-// // legProduct(req,(err,shoesData) => {
-// //   if (err){
-// //     return res.status(404);
-// //   }
-// //   return res.render('categories', {shoesData})
-// // });
-// // };
-// //
-// // exports.getacceories= (req,res) => {
-// // legProduct(req,(err,accessoriesData) => {
-// //   if (err){
-// //     return res.status(404);
-// //   }
-// //   return res.render('categories', {accessoriesData})
-// // });
-// // };
+const query = require('../database/queries/query');
+const { categoryCommands } = require('../database/sql_commands');
+
+exports.get = (req, res) => {
+  query(categoryCommands.selectNoFilter).then((result) => {
+    res.status(200).render('categories', {
+      style: 'categories',
+      result: result.rows,
+    });
+  }).catch(err => res.status(500).send({ errorBody: err, errorMessage: 'internal server error' }));
+};
