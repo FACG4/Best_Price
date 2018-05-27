@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  </div>
+  <div id="block_container">
+    <div id="bloc1">
+      <a href="/women"> <img src="./img/women.jpg"></a>
+      <span>Women</span>
+    </div>
+    <div id="bloc2">
+      <a href="/men"><img src="./img/men.jpg"> </a>
+      <span>Men</span>
+    </div>
+  </div>
+  <div class="clear">
+  </div>
+  {{#each result}}
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <a href="/details/{{this.id}}">  <img  src="{{this.img}}" style="width:100%"></a>
+        <div class="discount--home">Discount</div>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+  {{/each}}
+  <br>
+  <div style="text-align:center">
+    {{#each result}}
+      <span class="dot" onclick="currentSlide({{@index}})"></span>
+    {{/each}}
+  </div>
+  <form class="contactus" id="contactus" action="post">
+    <div class="userInfo">
+      <input id="email" type="email" placeholder="your e-mail">
+      <input id="name" type="text" placeholder="your name">
+    </div>
+    <div id="message" class="msg">
+      <textarea id="message" type="text" placeholder="your message" cols="73" rows="6"> </textarea>
+    </div>
+    <div class="btn">
+      <button class="button" type="submit">Send </button>
+    </div>
+  </form>
+  </div>
+
+  {{footer}}
+  <script src="./js/slider.js"></script>
+
+</body>
+
+</html>

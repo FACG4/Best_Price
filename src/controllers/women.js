@@ -1,3 +1,12 @@
+const getItems = require('./../database/queries/women');
+
 exports.get = (req, res) => {
-  res.render('women',{title:'women Fashion', style:'style'})
+  getItems(req, (err,result)=>{
+    if (err) {
+      return res.status(404).send(err, 'sorry error in getting data')
+    }
+    // console.log(result);
+    res.render('women',{title:'women Fashion',style: 'women&menStyle',result})
+  });
+
 }
