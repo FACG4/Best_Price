@@ -99,4 +99,14 @@ INSERT INTO disconut(items_id,disconut_value)VALUES(2,50);
 INSERT INTO disconut(items_id,disconut_value)VALUES(3,50);
 INSERT INTO disconut(items_id,disconut_value)VALUES(4,50);
 
+-- INSERT INTO users (user_name,first_name,last_name,password,email) VALUES ('marwa4','marwa','jomaa','123456789','ma@gmail.com');
+--
+-- INSERT INTO items (name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4) VALUES
+-- ('T_shirt','bestyle','M',10,'Gaza','female','torso','http://res.cloudinary.com/dbs4mr3ow/image/upload/v1526976968/11911653755-12MC-sessun-itahoahanaiapa-01.jpg','http://res.cloudinary.com/dbs4mr3ow/image/upload/v1526976968/11911653755-12MC-sessun-itahoahanaiapa-01.jpg','http://res.cloudinary.com/dbs4mr3ow/image/upload/v1526977024/11911653755-12MC-sessun-itahoahanaiapa-02.jpg','http://res.cloudinary.com/dbs4mr3ow/image/upload/v1526977040/11911653755-12MC-sessun-itahoahanaiapa-03.jpg','http://res.cloudinary.com/dbs4mr3ow/image/upload/v1526977052/11911653755-12MC-sessun-itahoahanaiapa-04.jpg'),
+--
+-- ('handbag','bestyle','S',10,'Gaza','female','accessories','http://res.cloudinary.com/dbs4mr3ow/image/upload/v1527060917/22403769384-07RO-yvonneyvonne-saclauren-01.jpg','http://res.cloudinary.com/dbs4mr3ow/image/upload/v1527060917/22403769384-07RO-yvonneyvonne-saclauren-01.jpg','http://res.cloudinary.com/dbs4mr3ow/image/upload/v1527061362/22403769384-07RO-yvonneyvonne-saclauren-02.jpg','http://res.cloudinary.com/dbs4mr3ow/image/upload/v1527061417/22403769384-07RO-yvonneyvonne-saclauren-03.jpg','http://res.cloudinary.com/dbs4mr3ow/image/upload/v1527060917/22403769384-07RO-yvonneyvonne-saclauren-01.jpg'),
+--
+-- ('T_shirt','bestyle','M',10,'Gaza','male','torso','http://res.cloudinary.com/dbs4mr3ow/image/upload/v1527015518/12041154515-06NY-la-panoplie-teetery-01.jpg','http://res.cloudinary.com/dbs4mr3ow/image/upload/v1527015518/12041154515-06NY-la-panoplie-teetery-01.jpg','http://res.cloudinary.com/dbs4mr3ow/image/upload/v1527015567/12041154515-06NY-la-panoplie-teetery-02.jpg','http://res.cloudinary.com/dbs4mr3ow/image/upload/v1527015678/12041154515-06NY-la-panoplie-teetery-03.jpg','http://res.cloudinary.com/dbs4mr3ow/image/upload/v1527015518/12041154515-06NY-la-panoplie-teetery-01.jpg');
+
+
 COMMIT;

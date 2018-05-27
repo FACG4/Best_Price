@@ -7,6 +7,9 @@ const router = require('./controllers/index');
 
 const app = express();
 
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json());
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.engine(
@@ -25,3 +28,4 @@ app.use(router);
 
 
 module.exports = app;
+
