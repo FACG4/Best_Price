@@ -1,4 +1,4 @@
-const {insertUsers,checkUsers} = require('./../Database/queries/signup');
+const {insertUsers,checkUsers} = require('./../database/queries/signup');
 const bcrypt = require('bcrypt');
 
 let isLetters = (value) => {
@@ -53,4 +53,3 @@ exports.post = (req, res, next) => {
   })
 
 };
-

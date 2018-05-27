@@ -6,7 +6,6 @@ const getItems = (req, cb)=>{
     if(err){
     return  cb(err)
     }
-    console.log(result.rows);
     return cb(null, result.rows)
   })
 }
