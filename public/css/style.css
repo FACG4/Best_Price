@@ -175,7 +175,6 @@ html, body {
 }
 
 .catagoriesContainer {
-  display: flex;
   flex-direction: row;
   flex-wrap :wrap;
  justify-content: space-around;
@@ -190,6 +189,7 @@ html, body {
 
 .cataImg {
   margin-top: 20px;
+  display: flex;
   align-items:center;
 }
 .footer {
