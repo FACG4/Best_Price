@@ -7,7 +7,6 @@ const router = require('express').Router();
 
 router.get('/signup',signup.get);
 router.post('/signup',signup.post);
-// router.get('/aboutus',aboutus);
 router.get('/',home.disconutValue);
 router.get('/details', details.get);
 router.get('/details/:id', details.get);
