@@ -147,12 +147,8 @@ li a:hover {
 
 /* Hide the images by default */
 .mySlides {
-<<<<<<< HEAD
-    display: none;
-=======
     /* display: none; */
     position: absolute;
->>>>>>> ca53ba7065250641404d823e5c6e1a7ea3c2ab6a
 }
 
 /* Next & previous buttons */
@@ -161,11 +157,7 @@ li a:hover {
   position: absolute;
   top: 50%;
   width: auto;
-<<<<<<< HEAD
-  margin-top: -22px;
-=======
   margin-top: 250px;
->>>>>>> ca53ba7065250641404d823e5c6e1a7ea3c2ab6a
   padding: 16px;
   color: white;
   font-weight: bold;
@@ -261,6 +253,7 @@ li a:hover {
 
 .cataImg {
   margin-top: 20px;
+  display: flex;
   align-items:center;
   height: 490px;
   width: 490px;
