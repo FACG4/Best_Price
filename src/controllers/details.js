@@ -1,4 +1,4 @@
-const viewDetails = require('../Database/queries/viewDetails');
+const viewDetails = require('../database/queries/viewDetails');
 exports.get = (req, res) => {
   const itemId = req.params.id;
   viewDetails(itemId, (err, details) => {

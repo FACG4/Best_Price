@@ -1,4 +1,4 @@
-const getMenProductsfromDB = require('./../Database/queries/men');
+const getMenProductsfromDB = require('./../database/queries/men');
 
 exports.discount = (req, res)=>{
   getMenProductsfromDB(req, (err,result)=>{

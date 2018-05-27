@@ -1,4 +1,4 @@
-const getItems = require('./../Database/queries/women');
+const getItems = require('./../database/queries/women');
 
 exports.get = (req, res) => {
   getItems(req, (err,result)=>{

@@ -1,11 +1,17 @@
-const slideIndex = 1;
+var slideIndex = 1;
 showSlides(slideIndex);
-plusSlides(n) => {showSlides(slideIndex += n);}
- currentSlide(n) => {showSlides(slideIndex = n);}
- showSlides(n) => {
-  let i;
-  const slides = document.getElementsByClassName("mySlides");
-   const dots = document.getElementsByClassName("dot");
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
