@@ -414,30 +414,3 @@ p{
   right:0;
   bottom:0;
 }
-
-//////////////////////////////////////////////////////
-/*
-.image-container{
-  height:200px;
-  width:150px;
-  background:aqua;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-end;
-  background-image:url(https://cdn3.foap.com/images/3be5c2c0c81545b6a5746f5014fa97c5/web_preview.jpg);
-  background-size:cover;
-}
-.views{
-  height:50px;
-  width:150px;
-  background:transparent;
-  display: flex:FLEX;
-
-}
-.image{
-  height:45px;
-  width:30px;
-  background:YELLOW;
-  margin: 2.5px 3.5px ;
-} */
-////////////////////////////////////////////////////////////////////////

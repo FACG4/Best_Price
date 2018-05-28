@@ -1,6 +1,6 @@
 BEGIN;
 
-DROP TABLE IF EXISTS users, items, saved,disconut CASCADE;
+DROP TABLE IF EXISTS users, items, saved,disconut,contactus CASCADE;
 
  CREATE TABLE users(
    id SERIAL PRIMARY KEY,
@@ -38,6 +38,13 @@ CREATE TABLE disconut(
   id SERIAL PRIMARY KEY,
   items_id INTEGER REFERENCES items(id) ON DELETE CASCADE,
   disconut_value FLOAT
+);
+
+CREATE TABLE contactus(
+id SERIAL PRIMARY key,
+email VARCHAR(50) UNIQUE NOT NULL,
+name VARCHAR(50) NOT NULL,
+message VARCHAR NOT NULL
 );
   INSERT INTO users (user_name,first_name,last_name,password,email) VALUES
    ('Haneenshahwan','haneen','shahwan','123456','hanen@gmail.com');
@@ -89,13 +96,13 @@ INSERT INTO items(name,shop_name,size,price,location,gender,class,img,views1,vie
 
 
 
-INSERT INTO saved(user_id,items_id) VALUES
-(1,1),
-(1,2),
-(2,1),
-(2,2),
-(3,2),
-(3,4);
+-- INSERT INTO saved(user_id,items_id) VALUES
+-- (1,1),
+-- (1,2),
+-- (2,1),
+-- (2,2),
+-- (3,2),
+-- (3,4);
 
 INSERT INTO disconut(items_id,disconut_value)VALUES(2,50);
 INSERT INTO disconut(items_id,disconut_value)VALUES(3,50);
