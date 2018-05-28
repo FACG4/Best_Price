@@ -33,7 +33,7 @@ window.onload = () => {
 const path = location.pathname.split('/')[3];
 let url;
 const pathArray = path.split('&');
-let elementList = [];
+const elementList = [];
 let priceElements = [];
 let sizeElements = [];
 let locationElements = [];
@@ -53,16 +53,11 @@ if (path) {
   }); // end of first forEach;
 }
 
-console.log('price', priceElements);
-console.log('size', sizeElements);
-console.log('loc', locationElements);
-
 const listener = (element) => {
   element.addEventListener('change', () => {
     if (!path || path === undefined) {
       url = element.id;
     } else if (path) {
-      console.log(element.id);
       if (element.id.startsWith('p') && priceElements.includes(element.id) && !element.checked) priceElements.splice(priceElements.indexOf(element.id), 1);
       if (element.id.startsWith('p') && !priceElements.includes(element.id) && element.checked) priceElements = priceElements.concat(element.id).sort();
 
@@ -75,19 +70,13 @@ const listener = (element) => {
       if (element.id.startsWith('l') && !locationElements.includes(element.id) && element.checked) locationElements = locationElements.concat(element.id).sort();
 
 
-      priceString = priceElements.join(',')
-      sizeString = sizeElements.join(',')
-      locationString = locationElements.join(',')
+      priceString = priceElements.join(',');
+      sizeString = sizeElements.join(',');
+      locationString = locationElements.join(',');
 
       url = elementList.concat(priceString).concat(sizeString).concat(locationString).filter(e => e !== '')
         .join('&');
     } // end of else statement;
-
-    console.log('newprice', priceString);
-    console.log('newsize', sizeString);
-    console.log('newloc', locationString);
-    console.log(url);
-
 
     fetch(url, {
       method: 'GET',
