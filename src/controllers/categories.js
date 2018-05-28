@@ -1,8 +1,8 @@
 const query = require('../database/queries/query');
-const { categoryCommands } = require('../database/sql_commands');
+const { sql, sqlBuilder } = require('../database/sql_commands');
 
 exports.get = (req, res) => {
-  query(categoryCommands.selectNoFilter).then((result) => {
+  query(sql.selectNoFilter).then((result) => {
     if (result.rowCount === 0) {
       res.status(200).render('categories', {
         style: 'categories',
@@ -18,17 +18,9 @@ exports.get = (req, res) => {
 };
 
 exports.hell = (req, res) => {
-  res.render('categories')
-  // if (req.params.id.split('&').length === 3) {
-  //   console.log(req.params.id);
-  //   res.render('categories');
-  // }
-  // if (req.params.id.split('&').length === 2) {
-  //   console.log(req.params.id);
-  //   res.render('categories');
-  // }
-  // if (req.params.id.split('&').length === 1) {
-  //   console.log(req.params.id);
-  //   res.render('categories');
-  // }
+  query(sqlBuilder('select', req.params.id, 'items', '*')).then((result) => {
+    res.render('categories', {
+      result: result.rows,
+    });
+  }).catch(err => console.log(err));
 };
