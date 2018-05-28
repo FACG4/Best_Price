@@ -71,11 +71,10 @@ INSERT INTO items (name,shop_name,size,price,location,gender,class,img,views1,vi
   'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527068281/shoseviews4.jpg');
 
 INSERT INTO users(user_name,first_name,last_name,password,email)VALUES
-('ishak52','ishak','kassab','123','ishak-3@hotmail.com'),
+('ishak52','ishak','kassab','$2b$10$KVa2dtanmpFWl896SAnv4.jlM3mN6gtAWtVnxk4KZEFqeMle6QJlG','ishak-3@hotmail.com'),
 ('farah','farah','zaqoot','123','farah-3@hotmail.com'),
 ('hannen','hannen','shahwan','123','hannen-3@hotmail.com'),
-('marwa','marwa','gomaa','123','marwa-3@hotmail.com'),
-('marwa4','marwa','jomaa','123456789','ma@gmail.com');
+('marwa','marwa','gomaa','123','marwa-3@hotmail.com');
 
 INSERT INTO items(name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4)VALUES
 ('t-shirt1','shop1','small',100.12,'gaza','female','t-shirts',
@@ -114,7 +113,7 @@ INSERT INTO users (user_name,first_name,last_name,password,email) VALUES ('marwa
 INSERT INTO items (name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4) VALUES
 ('T_shirt','TurkeyStyle','M',10,'Gaza','Female','Top','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-01.jpg','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-01.jpg','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-02.jpg','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-03.jpg','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-04.jpg'),
 
-('jeans','BeElegentShop','L','Rafah','Female','Legs','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-01.jpg','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-01.jpg','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-02.jpg','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-03.jpg','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-01.jpg');
+('jeans','BeElegentShop','L',10,'Rafah','Female','Legs','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-01.jpg','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-01.jpg','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-02.jpg','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-03.jpg','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-01.jpg');
 
 
 COMMIT;
