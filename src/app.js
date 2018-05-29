@@ -7,9 +7,6 @@ const router = require('./controllers/index');
 
 const app = express();
 
-app.use(bodyParser.urlencoded({extended: false}))
-app.use(bodyParser.json());
-
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.engine(
@@ -21,12 +18,12 @@ app.engine(
     defaultLayout: 'main',
   }),
 );
-// app.use(cookieParser());
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: false }));
+
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.set('port', process.env.PORT || 4000);
-// console.log(router);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser())
 app.use(router);
 
 

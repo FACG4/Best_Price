@@ -21,7 +21,9 @@
       <h4 class="name">{{this.name}} <span style="color:#752223">Item Name</span></h4>
       <h4 class="price">{{this.price}} <span style="color:#752223">NIS</span></h4>
       <h4 class="shopname">{{this.shop_name}} <span style="color:#752223">SHOP</span></h4>
-      <p><i class="fa fa-heart-o" onclick="btnClickLike({{id}})"></i> </p>
+      <!-- <p><i class="fa fa-heart-o" onclick="btnClickLike({{id}})"></i> </p> -->
+      <!-- <p class="info"> <a href="#"><i class="fa fa-heart-o" onclick="btnClick()"></i></a></p> -->
+      <p class="info"><a><i id="{{this.id}}" class="fa fa-heart-o" onclick="btnClick({{this.id}})"></i></a></p>
     </div>
 
   <div class="photos">
@@ -48,12 +50,7 @@
 
   </div>
   <script src="/js/details.js"></script>
+  <script src="/js/saved.js"></script>
 </body>
 
-<<<<<<< HEAD
 </html>
-=======
-</div>
-
-  <script src="/js/details.js"></script>
->>>>>>> b513aab30c6e231c72777a2d60fe18b1e67ab35f

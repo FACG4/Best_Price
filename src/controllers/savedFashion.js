@@ -1,4 +1,4 @@
-const save = require('../Database/queries/savedFashion');
+const save = require('../database/queries/savedFashion');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
@@ -6,13 +6,14 @@ exports.get = (req, res) => {
 
 // const passwordHash = bcrypt.hashSync('123', 10);
 // console.log(passwordHash);
-
-  const { accessToken } = req.body;
-  if (accessToken) {
-    const verifyCookie = jwt.verify(accessToken, process.env.SECRET_COOKIE);
+  const { cookie } = req.cookies;
+  if (cookie) {
+    const verifyCookie = jwt.verify(cookie, process.env.key);
     if (verifyCookie) {
-      const data = jwt.decode(accessToken);
-      save.savedFashion(data.id, (dbError, savedfashion) => {
+      const data = jwt.decode(cookie);
+      console.log(data);
+      save.savedFashion(data.userId, (dbError, savedFashion) => {
+        // console.log(savedFashion,'hi');
         if (dbError) {
           return res.status(500).send({
             error: dbError,
@@ -21,28 +22,29 @@ exports.get = (req, res) => {
 
         return res.render('saved', {
           layout: 'main',
-          savedfashion,
           style: 'style',
           title: 'saved fashion',
+          savedFashion,
         });
       });
     }
   } else {
     res.render('login', {
-      style: 'style',
+      style: 'login',
     });
   }
 };
 
 exports.post = (req, res) => {
   const reqbody = req.body;
-  const { accessToken } = req.cookies;
-  if (accessToken) {
-    const verifyCookie = jwt.verify(accessToken, process.env.SECRET_COOKIE);
+  // console.log(req.body,'saveddddddd');
+  const { cookie } = req.cookies;
+  if (cookie) {
+    const verifyCookie = jwt.verify(cookie, process.env.key);
     if (verifyCookie) {
-      const data = jwt.decode(accessToken);
+      const data = jwt.decode(cookie);
       save.saved(
-        data.id,
+        data.userId,
         reqbody.clothId,
         (dbError, result) => {
           if (dbError) {

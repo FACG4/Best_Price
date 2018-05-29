@@ -8,10 +8,10 @@ const savedFashion = (userId, cb) => {
   };
   dbconnection.query(
     savedFashionSql,
-    (dbError, savedfashion) => {
+    (dbError, savedFashion) => {
       if (dbError) return cb(dbError);
 
-      return cb(null, savedfashion.rows);
+      return cb(null, savedFashion.rows);
     },
   );
 };
@@ -38,4 +38,20 @@ const unsaved = (userId, clothId, cb) => {
   });
 };
 
-module.exports = { savedFashion, saved, unsaved };
+const checked = (userId, clothId, cb) => {
+  const checkedSql = {
+    text:
+      'SELECT * FROM saved WHERE items_id=$1 AND user_id=$2',
+    values: [userId, clothId],
+  };
+  dbconnection.query(
+    checkedSql,
+    (dbError, checked) => {
+      if (dbError) return cb(dbError);
+
+      return cb(null, checked.rows);
+    },
+  );
+};
+
+module.exports = { savedFashion, saved, unsaved,checked };
