@@ -1,5 +1,7 @@
 # Best_Price
 
+[![Build Status](https://travis-ci.org/FACG4/best-price.svg?branch=master)](https://travis-ci.org/FACG4/best-price)
+
 An app that allows you to find the best clothing and fashion deals available in the market from the comfort of your home.
 
 ### Problem Statement:
