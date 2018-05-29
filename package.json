@@ -6,7 +6,8 @@
   "scripts": {
     "test": "NODE_ENV=test node src/test/test.js | tap-spec",
     "dev": "node src/index.js",
-    "start": "nodemon src/index.js"
+    "start": "nodemon src/index.js",
+    "cover": "NODE_ENV=test istanbul cover src/test/test.js | tap-spec"
   },
   "repository": {
     "type": "git",
