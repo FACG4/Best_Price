@@ -1,3 +1,4 @@
 language: node_js
 node_js:
   - "node"
+TEST_DB_URL=postgres://farah:123456@localhost:5432/fashion
