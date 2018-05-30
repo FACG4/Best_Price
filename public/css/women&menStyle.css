@@ -150,12 +150,45 @@ html, body {
     }
 }
 
-@media only screen and (max-width: 380px) {
-    .cataImg{
-        width:250px;
-        height: 340px;
-        margin-top:0px
-    }
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: black;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  margin-top:5PX;
+  font-family: Roboto;
+  font-size: 14px;
+  color: white;
+
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.header a.tweet {
+  font-size: 25px;
+  font-weight: bold;
+}
+.headerForm {
+  display: flex;
+  align-items: center;
+  align: left;
+  margin-right: 10px;
+}
+
+.input {
+  background-color:black;
+  border: 0;
+  color: white;
+  font-family: Roboto;
+  font-style: Regular;
+  font-size: 16px;
 }
 
 @media only screen and (max-width: 280px) {
@@ -215,25 +248,5 @@ p{
         margin-top:0px;
         font-size: 10px;
           line-height: 50px;
-    }
-}
-
-@media only screen and (max-width: 300px) {
-    .discount{
-        width:50px;
-        height: 50px;
-        margin-top:0px;
-        font-size: 6px;
-          line-height: 25px;
-    }
-}
-
-@media only screen and (max-width: 200px) {
-    .discount{
-        width:20px;
-        height: 20px;
-        margin-top:0px;
-        font-size: 4px;
-          line-height: 17px;
     }
 }

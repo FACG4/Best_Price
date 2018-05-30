@@ -27,6 +27,9 @@
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "jsonwebtoken": "^8.2.1",
+    "nodemailer": "^4.6.5",
+    "nodemon": "^1.17.4",
+    "path": "^0.12.7",
     "pg": "^7.4.3",
     "sweetalert": "^2.1.0"
   },
@@ -34,10 +37,13 @@
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.12.0",
+<<<<<<< HEAD
     "istanbul": "^0.4.5",
+=======
+>>>>>>> 23adc8fac5076b371ea7e1570a95892e047001cb
     "nodemon": "^1.17.4",
     "supertest": "^3.1.0",
-    "tap-spec": "^4.1.1",
+    "tap-spec": "^4.1.2",
     "tape": "^4.9.0"
   }
 }

@@ -1,6 +1,10 @@
 BEGIN;
 
+<<<<<<< HEAD:src/database/db_build.sql
 DROP TABLE IF EXISTS users, items, saved, disconut CASCADE;
+=======
+DROP TABLE IF EXISTS users, items, saved,disconut,contactus CASCADE;
+>>>>>>> 23adc8fac5076b371ea7e1570a95892e047001cb:src/database/db_bulid.sql
 
  CREATE TABLE users(
    id SERIAL PRIMARY KEY,
@@ -39,8 +43,78 @@ CREATE TABLE disconut(
   items_id INTEGER REFERENCES items(id) ON DELETE CASCADE,
   disconut_value FLOAT
 );
-  INSERT INTO users (user_name,first_name,last_name,password,email) VALUES
-   ('hanenn','hanenn','shahwann','2b$10$NqxpWjA9/t8enmn058aD7..ybEHREcb7vY8dVXKObb7M.qmBXRifm','hanenn1@hotmail.com');
+
+CREATE TABLE contactus(
+id SERIAL PRIMARY key,
+email VARCHAR(50) UNIQUE NOT NULL,
+name VARCHAR(50) NOT NULL,
+message VARCHAR NOT NULL
+
+);
+
+INSERT INTO items(name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4)VALUES
+('Shirt','Mahdi','L',50,'Gaza','female','top',
+  'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527581236/men1111.jpg',
+  'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527581255/men11.jpg',
+  'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527581255/men111.jpg',
+  'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527581255/men1.jpg',
+  'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527581236/men1111.jpg');
+  INSERT INTO items(name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4)VALUES
+  ('Shirt','PosterMan','M',80,'Gaza','female','top',
+    'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527581797/men2.jpg',
+  'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527581797/men22.jpg',
+  'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527581797/men22.jpg',
+  'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527581797/men222.jpg',
+'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527581792/men2222.jpg');
+INSERT INTO items(name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4)VALUES
+('Shirt','FOX','L',70,'Rafah','male','top',
+  'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527066694/men-01.jpg',
+  'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527066710/viewmen1.jpg',
+  'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527066711/viewmen2.jpg',
+  'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527066709/viewmen3.jpg',
+  'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527066694/men-01.jpg');
+  INSERT INTO items(name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4)VALUES
+  ('Shirt','Mahdi','M',40,'Khan-Younis','male','top',
+    'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527067164/men2view2.jpg',
+    'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527067164/men2.jpg',
+    'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527067164/men1view1.jpg',
+    'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527067164/men2view.jpg',
+    'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527067164/men2view2.jpg');
+    INSERT INTO items(name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4)VALUES
+  ('Shirt','Mahdi','M',40,'Khan-Younis','male','top',
+    'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527583748/men6666.jpg',
+    'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527583747/men6.jpg',
+    'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527583748/men66.jpg',
+    'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527583748/men666.jpg',
+    'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527583748/men6666.jpg');
+    INSERT INTO items(name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4)VALUES
+    ('Shirt','Shurafa','S',100.12,'Jabalia','male','top',
+      'https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-01.jpg',
+      'https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-01.jpg',
+      'https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-02.jpg',
+      'https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-03.jpg',
+      'https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-04.jpg');
+      INSERT INTO items(name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4)VALUES
+      ('trousers','de facto','M',60,'Gaza','male','leg',
+        'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527582644/men33.jpg',
+        'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527582644/men333.jpg',
+        'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527582643/men3333.jpg',
+        'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527582643/men3.jpg',
+        'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527582644/men33.jpg');
+        INSERT INTO items(name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4)VALUES
+        ('trousers','de facto','S',70,'Gaza','male','leg',
+          'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527583146/men4.jpg',
+          'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527583146/men4444.jpg',
+          'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527583147/men444.jpg',
+          'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527583159/men44.jpg',
+          'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527583146/men4.jpg');
+          INSERT INTO items(name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4)VALUES
+        ('trousers','de facto','L',40,'Nusrirat','male','leg',
+          'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527583543/men5.jpg',
+          'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527583543/men55.jpg',
+          'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527583543/men555.jpg',
+          'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527583543/men5555.jpg',
+          'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527583543/men5.jpg');
    INSERT INTO items (name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4)VALUES
    ('Worker Jacket','White','S L M',50,'Gaza','female','top',
      'http://res.cloudinary.com/ddmnsmluf/image/upload/v1526909230/111412751060-05KH-mm6-vesteworker-01.jpg',
@@ -49,6 +123,7 @@ CREATE TABLE disconut(
 'http://res.cloudinary.com/ddmnsmluf/image/upload/v1526909230/111412751060-05KH-mm6-vesteworker-01.jpg',
 'http://res.cloudinary.com/ddmnsmluf/image/upload/v1526909230/111412751060-05KH-mm6-vesteworker-01.jpg');
 INSERT INTO items (name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4)VALUES
+<<<<<<< HEAD:src/database/db_build.sql
 ('Shirt','White','S L M',50,'Gaza','male','top',
   'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527066694/men-01.jpg',
   'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527066710/viewmen1.jpg',
@@ -64,6 +139,9 @@ INSERT INTO items (name,shop_name,size,price,location,gender,class,img,views1,vi
   'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527067164/men2view2.jpg');
 INSERT INTO items (name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4)VALUES
 ('shose','White','S L M',50,'Gaza','female','shoes',
+=======
+('shose','White','S L M',50,'Gaza','female','shose',
+>>>>>>> 23adc8fac5076b371ea7e1570a95892e047001cb:src/database/db_bulid.sql
   'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527068282/shoseview1.jpg',
   'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527068281/shoseviews3.jpg',
   'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527068283/shoseview2.jpg',
@@ -93,6 +171,10 @@ INSERT INTO items(name,shop_name,size,price,location,gender,class,img,views1,vie
 ('t-shirt4','shop3','x-larg',400.12,'gaza','female','t-shirts','https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-01.jpg','https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-01.jpg','https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-02.jpg','https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-03.jpg','https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-04.jpg'),
 ('T_shirt','TurkeyStyle','M',10,'Gaza','female','Top','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-01.jpg','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-01.jpg','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-02.jpg','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-03.jpg','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-04.jpg'),
 ('jeans','BeElegentShop','L',10,'Rafah','female','legs','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-01.jpg','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-01.jpg','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-02.jpg','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-03.jpg','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-01.jpg');
+
+INSERT INTO disconut(items_id,disconut_value)VALUES(2,50);
+INSERT INTO disconut(items_id,disconut_value)VALUES(3,50);
+INSERT INTO disconut(items_id,disconut_value)VALUES(4,50);
 
 INSERT INTO users (user_name,first_name,last_name,password,email) VALUES ('marwa4','marwa','jomaa','123456789','ma@gmail.com');
 INSERT INTO users (user_name,first_name,last_name,password,email) VALUES ('marwa44','marwa','jomaa','123456789','ma4@gmail.com');
