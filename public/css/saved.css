@@ -11,13 +11,7 @@ body {
   align-self: center;
 }
 
-/* .containernav {
-  display: flex;
-  width: 1140px;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap; */
-}
+
 
 .bigContainer {
   display: flex;
