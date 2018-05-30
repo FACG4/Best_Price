@@ -12,6 +12,7 @@ const unsaved = require('./unsaved');
 const signup = require('./signup');
 const logout = require('./logout');
 const contactus = require('./contactus');
+const about = require('./about');
 
 router.use(checkAuth);
 router.get('/women', women.get);
@@ -19,6 +20,7 @@ router.get('/', home.disconutValue);
 router.get('/men', men.get);
 router.get('categories/size', women.get);
 router.get('/categories', categories.get);
+router.get('/aboutus', about);
 router.get('/signup', signup.get);
 router.post('/signup', signup.post);
 router.get('/login', login.get);
