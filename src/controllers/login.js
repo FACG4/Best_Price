@@ -17,7 +17,7 @@ exports.post = (req, res) => {
     if (data.length === 0) {
       res.send({ error: true, message: 'Wrong username or password' });
     } else {
-      bcrypt.compare(password, data[0].password, (Err, response) => {
+      bcrypt.compare(password, data[0].password, (err, response) => {
         if (err) throw new Error(err, 'compare');
         if (response === false) {
           res.send({ error: true, message: 'Wrong username or password11' });

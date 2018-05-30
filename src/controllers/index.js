@@ -13,6 +13,8 @@ const contactus = require('./contactus');
 const logout = require('./logout');
 const categories = require('./categories');
 
+
+router.use(checkAuth);
 router.get('/signup', signup.get);
 router.post('/signup', signup.post);
 router.get('/login', login.get);
@@ -32,5 +34,11 @@ router.get('categories/size', women.get);
 router.get('/categories', categories.get);
 router.get('/details', details.get);
 router.get('/details/:id', details.get);
-router.use(checkAuth);
+router.get('/women', women.get);
+router.get('/men', men.get);
+router.get('categories/size', women.get);
+router.get('/categories', categories.get);
+router.get('/logout', logout.get);
+
+
 module.exports = router;
