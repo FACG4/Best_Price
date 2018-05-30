@@ -26,18 +26,7 @@ exports.post = (req, res) => {
           const token = jwt.sign({ userId: data[0].id, userName: data[0].user_name }, secret);
 
           res.cookie('session', token, { maxAge: 1000000, httpOnly: true });
-<<<<<<< HEAD
-          req.user = data[0].user_name
-          res.send({msg:'success', user:req.user})
-          const key = process.env.key;
-          const token = jwt.sign({ userId: data[0].id, userName: data[0].user_name }, key);
-          console.log(token,'token');
-          res.cookie('cookie', token, { maxAge: 1000000, httpOnly: true });
-
-          res.redirect('/');
-=======
           req.user = data[0].user_name;
->>>>>>> 23adc8fac5076b371ea7e1570a95892e047001cb
 
           res.send({ msg: 'success', user: req.user });
         }
