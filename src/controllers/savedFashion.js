@@ -2,11 +2,11 @@ const save = require('../database/queries/savedFashion');
 const jwt = require('jsonwebtoken');
 
 exports.get = (req, res) => {
-  const { cookie } = req.cookies;
-  if (cookie) {
-    const verifyCookie = jwt.verify(cookie, process.env.key);
+  const { session } = req.cookies;
+  if (session) {
+    const verifyCookie = jwt.verify(session, process.env.secret);
     if (verifyCookie) {
-      const data = jwt.decode(cookie);
+      const data = jwt.decode(session);
       save.savedFashion(data.userId, (dbError, savedFashion) => {
         if (dbError) {
           return res.status(500).send({
@@ -31,11 +31,11 @@ exports.get = (req, res) => {
 
 exports.post = (req, res) => {
   const reqbody = req.body;
-  const { cookie } = req.cookies;
-  if (cookie) {
-    const verifyCookie = jwt.verify(cookie, process.env.key);
+  const { session } = req.cookies;
+  if (session) {
+    const verifyCookie = jwt.verify(session, process.env.secret);
     if (verifyCookie) {
-      const data = jwt.decode(cookie);
+      const data = jwt.decode(session);
       save.saved(
         data.userId,
         reqbody.clothId,

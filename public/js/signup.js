@@ -71,7 +71,7 @@ submit.addEventListener('click', (event) => {
           console.log(res.error);
           errorMessage.textContent = res.message;
         } else if (res.success) {
-          window.location.pathname = '/';
+          window.location.pathname = '/login';
         }
       })
       .catch((err) => {

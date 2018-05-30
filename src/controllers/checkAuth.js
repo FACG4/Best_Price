@@ -7,7 +7,7 @@ module.exports = (req, res, next) => {
   // console.log(req);
   if (cookies.session) {
     // console.log(cookies.session );
-    jwt.verify(cookies.session, process.env.key, (err, decoded) => {
+    jwt.verify(cookies.session, process.env.secret, (err, decoded) => {
       if (err) {
         res.redirect('/login');
         next();

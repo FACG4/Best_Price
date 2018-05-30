@@ -22,7 +22,7 @@ exports.post = (req, res) => {
         if (response === false) {
           res.send({ error: true, message: 'Wrong username or password11' });
         } else {
-          const secret = process.env.key;
+          const secret = process.env.secret;
           const token = jwt.sign({ userId: data[0].id, userName: data[0].user_name }, secret);
 
           res.cookie('session', token, { maxAge: 1000000, httpOnly: true });

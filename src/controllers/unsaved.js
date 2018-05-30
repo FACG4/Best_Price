@@ -3,11 +3,11 @@ const jwt = require('jsonwebtoken');
 
 exports.post = (req, res) => {
   const reqbody = req.body;
-  const { cookie } = req.cookies;
-  if (cookie) {
-    const verifyCookie = jwt.verify(cookie, process.env.key);
+  const { session } = req.cookies;
+  if (session) {
+    const verifyCookie = jwt.verify(session, process.env.secret);
     if (verifyCookie) {
-      const data = jwt.decode(cookie);
+      const data = jwt.decode(session);
       save.unsaved(
         data.userId,
         reqbody.clothId,
