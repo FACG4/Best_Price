@@ -1,11 +1,12 @@
 const router = require('express').Router();
 const women = require('./women');
 const men = require('./men');
-// const categories = require('./categories');
 const login = require('./login');
 const checkAuth = require('./checkAuth');
 const home = require('./home');
 const details = require('./details');
+const saved = require('./savedFashion');
+const unsaved = require('./unsaved');
 const signup = require('./signup');
 const about = require('./about');
 const contactus = require('./contactus');
@@ -22,7 +23,9 @@ router.get('/details', details.get);
 router.get('/details/:id', details.get);
 router.get('/login', login.get);
 router.post('/login', login.post);
+// router.get('/categories', categories.get);
+router.get('/saved-fashion/:id', saved.get);
+router.post('/saved', saved.post);
+router.post('/unsaved', unsaved.post);
 router.use(checkAuth);
-
-
 module.exports = router;
