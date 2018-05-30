@@ -3,28 +3,41 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const swal = require('sweetalert');
 exports.get = (req, res) => {
-  res.render('login', { style: 'login', layout: 'second' });
+  if(req.loggedIn){
+    return res.redirect('/')
+  }else{
+    res.render('login', { style: 'login', layout: 'second' });
+
+  }
 };
 
 
 exports.post = (req, res) => {
-  const { username, password } = req.body;
-  // console.log(req.body);
+
+  const {username, password } = req.body;
   getuserData(username, (err, data) => {
-    if (!data.length) {
-      res.send('invalid username');
+    if (data.length===0) {
+      res.send({ error: true, message: 'Wrong username or password' });
     } else {
-      bcrypt.compare(password, data[0].password, (errr, response) => {
-        if (err) throw new Error(errr, 'compare');
+      bcrypt.compare(password, data[0].password, (err, response) => {
+        if (err) throw new Error(err, 'compare');
         if (response === false) {
-          res.send("invalid password")
+          res.send({ error: true, message: 'Wrong username or password11' });
         } else {
+
+          const secret = process.env.key;
+          const token = jwt.sign({ userId: data[0].id, userName: data[0].user_name }, secret);
+        
+          res.cookie('session', token, { maxAge: 1000000, httpOnly: true });
+          req.user = data[0].user_name
+          res.send({msg:'success', user:req.user})
           const key = process.env.key;
           const token = jwt.sign({ userId: data[0].id, userName: data[0].user_name }, key);
           console.log(token,'token');
           res.cookie('cookie', token, { maxAge: 1000000, httpOnly: true });
-            // res.cookie('accessToken', token);
+            
           res.redirect('/');
+
         }
       });
     }
