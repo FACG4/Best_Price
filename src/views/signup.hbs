@@ -2,45 +2,46 @@
 
 
 <form action="/signup" method="POST" id="signUpForm">
-<div class="container">
+<div class="login_div">
 
- <hr>
-<p id="header_para" class="w3-animate-fading"><span id="best"><b>best</b></span><span id="price">Price</span></p>
   <div>
-   <label for="uname"> <b>User name</b></label>
-    <input type="text" placeholder="Enter your user name" name="uname" id="uname" value ="" required>
+ <hr>
+ <p id="header_para" class="w3-animate-fading"><span id="best"><b>best</b></span><span id="price">Price</span></p>
+  <div class="inputWithIcon">
+    <input type="text" placeholder="Enter your user name" name="uname" id="uname" value ="" required class="input_style w3-animate-right">
     <i class="fas fa-exclamation-circle" id='userNameIcon'></i>
   </div>
-  <div>
-    <label for="fname"><b>first Name</b></label>
-    <input type="text" placeholder="Enter First Name" name="fname" id="fname" value ="" required>
+  <br /><br />
+  <div class="inputWithIcon">
+
+    <input type="text" placeholder="Enter First Name" name="fname" id="fname" value ="" required class="input_style w3-animate-right">
     <i class="fas fa-exclamation-circle" id='firstNameIcon'></i>
   </div>
+<br /><br />
+  <div class="inputWithIcon">
 
-  <div>
-  <label for="lname"> <b>Last Name</b></label>
-  <input type="text" placeholder="Enter Last Name" name="lname" id="lname" value ="" required>
+  <input type="text" placeholder="Enter Last Name" name="lname" id="lname" value ="" required class="input_style w3-animate-right">
   <i class="fas fa-exclamation-circle" id='lastNameIcon'></i>
   </div>
+<br /><br />
+  <div class="inputWithIcon">
 
-  <div>
-  <label for="email"><b>Email</b></label>
-  <input type="email" placeholder="Enter Email" name="email" id="email" value =""  required>
+  <input type="email" placeholder="Enter Email" name="email" id="email" value =""  required class="input_style w3-animate-right">
   <i class="fas fa-exclamation-circle" id='emailIcon'></i>
   </div>
+<br /><br />
+  <div class="inputWithIcon">
 
-  <div>
-  <label for="password"><b>Password</b></label>
-  <input type="password" placeholder="Enter Password" name="password" id="password" value =""  required>
+  <input type="password" placeholder="Enter Password" name="password" id="password" value =""  required class="input_style w3-animate-left">
   <i class="fas fa-exclamation-circle" id='passwordIcon'></i>
   </div>
   <p class='form__error' id='formError'></p>
+<br /><br />
+  <button type="submit"  name="submit_button" class="signupbtn" value="Sign up" class="w3-animate-bottom" id="btn1">Sign Up</button>
 
-  <button type="submit" class="signupbtn"  id="btn1">Sign Up</button>
 
+  </div>
 </div>
 </form>
-
-
-
 <script src="./js/signup.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

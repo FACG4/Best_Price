@@ -1,0 +1,87 @@
+html, body {
+    font-family: Verdana,sans-serif;
+    font-size: 15px;
+    line-height: .5;
+}
+.login_div{
+	box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background-color: #E0F2F1;
+	width: 50%;
+	height: 60%;
+	border-radius: 10px;
+  margin: 234px;
+  display: flex;
+  justify-content: center;
+}
+
+#signUpForm{
+  display: flex;
+  justify-content: center;
+}
+
+#header_para{
+	color: #00BFA5;
+}
+#best{
+  font-family:'Raleway', sans-serif;
+	opacity: .7;
+	font-size: 40px;
+}
+#price{
+	font-family:'Raleway', sans-serif;
+	opacity: .7;
+}
+
+#hr1{
+	border-radius: 4px;
+	width: 1.5%;
+	height: 4px;
+	background-color:#4cddc0;
+	border: none;
+	display: inline-block;
+	margin-top:30px;
+}
+#hr2{
+	border-radius: 4px;
+	width: 5.5%;
+	height: 4px;
+	background-color:#4cddc0;
+	border: none;
+	display: inline-block;
+}
+.input_style:focus{width:80% !important}
+.input_style{
+	-webkit-transition:width 0.4s ease-in-out;transition:width 0.4s ease-in-out;
+	height: 40px;
+	background-color: #212121;
+	outline: none;
+	border: none;
+	border-radius: 20px;
+	padding-left: 10px;
+	color: #4cddc0;
+  width: 100%;
+}
+
+.inputWithIcon{
+  display: flex;
+  align-items: center;
+}
+#btn1{
+	box-shadow: 0 8px 60px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	width: 200px;
+	height: 40px;
+	border-radius: 10px;
+	border: none;
+	margin-bottom: 10%;
+	outline: none;
+	background-color: #4cddc0;
+	transition: 400ms ease-in-out;
+}
+#btn1:hover{
+	background-color: #1a495b;
+	color: white;
+}
+#forgot a{
+	font-size: 120%;
+	color: white;
+}

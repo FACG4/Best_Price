@@ -140,6 +140,7 @@ img{
    padding: 9px;
    overflow: hidden;
    background-color: #333;
+   position: fixed;
 }
 
 
