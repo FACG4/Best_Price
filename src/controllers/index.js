@@ -15,11 +15,15 @@ const signup = require('./signup');
 
 
 router.use(checkAuth);
-router.get('/:category/:item/', categories.get);
-router.get('/:category/:item/:id', categories.hell);
+router.get('/men/:category/', categories.getMen);
+router.get('/men/:category/', categories.getMen);
+router.get('/men/:category/', categories.getMen);
+router.get('/men/:category/', categories.getMen);
+router.get('/women/:category/', categories.getWomen);
+router.get('/women/:category/', categories.getWomen);
+router.get('/women/:category/', categories.getWomen);
+router.get('/women/:category/', categories.getWomen);
 router.get('/', home.disconutValue);
-router.get('categories/size', women.get);
-router.get('/categories', categories.get);
 router.get('/signup', signup.get);
 router.post('/signup', signup.post);
 router.get('/login', login.get);
@@ -27,6 +31,7 @@ router.post('/login', login.post);
 router.get('/details', details.get);
 router.get('/details/:id', details.get);
 router.get('/women', women.get);
+router.get('/men', men.get);
 router.get('/saved-fashion/:id', saved.get);
 router.post('/saved', saved.post);
 router.post('/unsaved', unsaved.post);
