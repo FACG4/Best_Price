@@ -4,7 +4,7 @@
   "description": "An app that allows you to find the best clothing and fashion deals available in the market from the comfort of your home.",
   "main": "index.js",
   "scripts": {
-    "test": "test src/test/test.js",
+    "test": "NODE_ENV=test node src/test/test.js | tap-spec",
     "dev": "node src/index.js",
     "start": "nodemon src/index.js"
   },
@@ -26,16 +26,19 @@
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "jsonwebtoken": "^8.2.1",
+    "nodemailer": "^4.6.5",
+    "nodemon": "^1.17.4",
+    "path": "^0.12.7",
     "pg": "^7.4.3",
     "sweetalert": "^2.1.0"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
-    "nodemon": "^1.17.4",
     "eslint-plugin-import": "^2.12.0",
+    "nodemon": "^1.17.4",
     "supertest": "^3.1.0",
-    "tap-spec": "^4.1.1",
+    "tap-spec": "^4.1.2",
     "tape": "^4.9.0"
   }
 }
