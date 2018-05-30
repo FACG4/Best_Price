@@ -7,9 +7,10 @@ const login = require('./login');
 const checkAuth = require('./checkAuth');
 const home = require('./home');
 const details = require('./details');
+const saved = require('./savedFashion');
+const unsaved = require('./unsaved');
 const signup = require('./signup');
 const logout = require('./logout');
-
 router.use(checkAuth);
 router.get('/women', women.get);
 router.get('/',home.disconutValue);
@@ -23,6 +24,7 @@ router.post('/login', login.post);
 router.get('/logout', logout.get);
 router.get('/details', details.get);
 router.get('/details/:id', details.get);
-
-
+router.get('/saved-fashion/:id', saved.get);
+router.post('/saved', saved.post);
+router.post('/unsaved', unsaved.post);
 module.exports = router;
