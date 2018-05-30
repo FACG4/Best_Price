@@ -5,8 +5,8 @@ const contactus = (email, name, message, cb) => {
     text: 'INSERT INTO contactus (email, name, message)VALUES($1,$2,$3) ',
     values: [email, name, message],
   };
-  connection.query(sql, (dbConnectionError, result) => {
-    if (dbConnectionError) return cb(dbConnectionError);
+  connection.query(sql, (connectionErrorWithDB, result) => {
+    if (connectionErrorWithDB) cb(connectionErrorWithDB);
     cb(null, result);
   });
 };
