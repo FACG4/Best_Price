@@ -6,7 +6,13 @@ exports.get = (req, res) => {
       return res.status(404).send(err, 'sorry error in getting data')
     }
     // console.log(result);
-    res.render('women',{title:'women Fashion',style: 'women&menStyle',result})
+    res.render('women',
+    {title:'women Fashion',
+    style: 'women&menStyle',
+    result,
+    loggedIn:req.loggedIn,
+     userName:req.userName,
+   })
   });
 
 }

@@ -6,6 +6,11 @@ exports.get = (req, res)=>{
     throw new Error (err, 'error in getting data')
   }
   console.log(result);
-  res.render('men',{style:"women&menStyle",result})
+  res.render('men',
+  {style:"women&menStyle",
+  result,
+  loggedIn:req.loggedIn,
+   userName:req.userName,
+ })
 });
 }
