@@ -7,7 +7,13 @@ exports.get = (req, res) => {
   if (err) return res.status(500).send({ err });
     // if (res.rows)
     return res.render('details', {
-      style: 'details', layout: 'main', title: 'details', details,
+      style: 'details',
+       layout: 'main',
+        title: 'details',
+        details,
+        loggedIn:req.loggedIn,
+         userName:req.userName,
+
     });
   });
 };

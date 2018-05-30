@@ -7,5 +7,6 @@ exports.get = (req, res) => {
       style: 'categories',
       result: result.rows,
     });
-  }).catch(err => res.status(500).send({ errorBody: err, errorMessage: 'internal server error' }));
+  }).catch(err => res.status(500).send({ errorBody: err, errorMessage: 'internal server error' ,loggedIn:req.loggedIn,
+   userName:req.userName,}));
 };
