@@ -3,10 +3,13 @@ require('env2')('./config.env');
 
 module.exports = (req, res, next) => {
   const cookies = req.cookies ? (req.cookies) : {};
-  if (cookies.cookie) {
-    jwt.verify(cookies.cookie, process.env.key, (err, decoded) => {
+  // console.log(req.cookies);
+  // console.log(req);
+  if (cookies.session) {
+    // console.log(cookies.session );
+    jwt.verify(cookies.session, process.env.key, (err, decoded) => {
       if (err) {
-        res.render('/login');
+        res.redirect('/login');
         next();
       } else {
         req.userName = decoded.userName;
@@ -15,5 +18,6 @@ module.exports = (req, res, next) => {
       }
     });
   }
+
   next();
 };

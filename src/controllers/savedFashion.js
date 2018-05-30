@@ -1,6 +1,5 @@
 const save = require('../database/queries/savedFashion');
 const jwt = require('jsonwebtoken');
-const bcrypt = require('bcrypt');
 
 exports.get = (req, res) => {
   const { cookie } = req.cookies;
@@ -32,7 +31,6 @@ exports.get = (req, res) => {
 
 exports.post = (req, res) => {
   const reqbody = req.body;
-  // console.log(req.body,'saveddddddd');
   const { cookie } = req.cookies;
   if (cookie) {
     const verifyCookie = jwt.verify(cookie, process.env.key);

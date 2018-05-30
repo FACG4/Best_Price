@@ -9,7 +9,6 @@ const getuserData = (username, cb) => {
     if (err) {
       return cb(err);
     }
-
     return cb(null, data.rows);
   });
 };

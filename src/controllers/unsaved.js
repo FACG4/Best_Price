@@ -4,7 +4,6 @@ const jwt = require('jsonwebtoken');
 exports.post = (req, res) => {
   const reqbody = req.body;
   const { cookie } = req.cookies;
-  // console.log(cookie, 'unsaved');
   if (cookie) {
     const verifyCookie = jwt.verify(cookie, process.env.key);
     if (verifyCookie) {

@@ -5,6 +5,16 @@ exports.get = (req, res) => {
     if (err) {
       return res.status(404).send(err, 'sorry error in getting data');
     }
-    res.render('women', { title: 'women Fashion', style: 'women&menStyle', result });
+
+    res.render(
+      'women',
+      {
+        title: 'women Fashion',
+        style: 'women&menStyle',
+        result,
+        loggedIn: req.loggedIn,
+        userName: req.userName,
+      },
+    );
   });
 };
