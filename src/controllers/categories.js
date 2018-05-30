@@ -21,6 +21,7 @@ exports.hell = (req, res) => {
   query(sqlBuilder('select', req.params.id, 'items', '*')).then((result) => {
     res.render('categories', {
       result: result.rows,
+      style: 'categories',
     });
   }).catch(err => console.log(err));
 };
