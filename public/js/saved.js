@@ -1,24 +1,21 @@
 function fetchFunction(url, data, cb) {
   fetch(url, {
 
-   method: 'POST',
-   headers: {
-     'Accept': 'application/json',
-     'Content-Type': 'application/json'
-   },
-   body: data,
-   credentials: 'include'
- })
- .then((response) =>{
-      return response.json();
- })
- .then((response) => {
-    cb(null,response);
- })
- .catch( (err) => {
-   cb(err)
- });
-
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: data,
+    credentials: 'include',
+  })
+    .then(response => response.json())
+    .then((response) => {
+      cb(null, response);
+    })
+    .catch((err) => {
+      cb(err);
+    });
 }
 
 let save;

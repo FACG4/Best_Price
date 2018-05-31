@@ -3,7 +3,7 @@ const dbconnection = require('../db_connection');
 const savedFashion = (userId, cb) => {
   const savedFashionSql = {
     text:
-      'select items.img, items.name, items.price, items.gender,items.id from items inner join saved on saved.items_id = items.id and user_id = $1',
+      'select items.img, items.name, items.price, items.gender,items.id from items inner join saved on saved.items_id = items.id and user_id = $1' ,
     values: [userId],
   };
   dbconnection.query(
@@ -38,20 +38,16 @@ const unsaved = (userId, clothId, cb) => {
   });
 };
 
-const checked = (userId, clothId, cb) => {
-  const checkedSql = {
+
+const checkedSingleItems = (userId, clothId, cb) => {
+  const checkedSingleItemsSql = {
     text:
-      'SELECT * FROM saved WHERE items_id=$1 AND user_id=$2',
+      'SELECT * from saved where user_id= $1  and items_id=$2',
     values: [userId, clothId],
   };
-  dbconnection.query(
-    checkedSql,
-    (dbError, checked) => {
-      if (dbError) return cb(dbError);
-
-      return cb(null, checked.rows);
-    },
-  );
+  return dbconnection.query(checkedSingleItemsSql, cb);
 };
 
-module.exports = { savedFashion, saved, unsaved,checked };
+module.exports = {
+  savedFashion, saved, unsaved, checkedSingleItems,
+};

@@ -122,46 +122,6 @@ img{
   animation-duration: 1.5s;
 }
 
-.contactus{
-  background: #333333;
-      max-width: 1000px;
-      position: relative;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 10px;
-      padding: 20px 0;
-}
-.userInfo{
-  display: flex;
-  justify-content: center;
-  padding:20px;
-
-}
-.userInfo input {
-  border-radius: 8px;
-    width: 300px;
-    height: 39px;
-}
-
-.msg{
-  display: flex;
-  justify-content: center;
-}
-.msg textarea{
-  border-radius: 8px;
-
-}
-
-.btn{
-  display: flex;
-  justify-content:center;
-}
-.btn button{
-  background: white;
-  border-radius: 8px;
-  color: black;
-}
 @-webkit-keyframes fade {
   from {opacity: .4}
   to {opacity: 1}

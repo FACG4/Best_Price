@@ -5,7 +5,6 @@ exports.get = (req, res) => {
 };
 exports.post = (req, res) => {
   const { email, name, message } = req.body;
-  console.log(req.body);
   contactus(email, name, message, (err, result) => {
     if (err) {
       return res.status(409).send();

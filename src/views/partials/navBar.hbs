@@ -1,9 +1,9 @@
 <ul>
   <li><a class="active" href="/Women">Women</a></li>
   <li><a href="/men">Men</a></li>
-  <li><a href="#contactus" class="contact">Contact us</a></li>
+  <li><a href="/contactus" class="contact">Contact us</a></li>
   <li><a href="/aboutus" >About</a></li>
-  <li><a href="/saved-fashion/{{data.userId}}" >saved</a></li>
-  <!-- {{#each savedFashion}}
-  {{/each}} -->
+  {{#if loggedIn}}
+  <li><a href="/saved-fashion/{{this.id}}" >favorits</a></li>
+  {{/if}}
 </ul>

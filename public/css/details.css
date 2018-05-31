@@ -21,13 +21,6 @@ body {
 .bigphoto img {
   height: 85%;
 }
-/*
-.topContainer {
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
-}
-*/
 .photos {
   display: flex;
   flex-wrap: wrap;

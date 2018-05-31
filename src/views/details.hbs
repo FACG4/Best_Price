@@ -23,7 +23,11 @@
       <h4 class="shopname">{{this.shop_name}} <span style="color:#752223">SHOP</span></h4>
       <!-- <p><i class="fa fa-heart-o" onclick="btnClickLike({{id}})"></i> </p> -->
       <!-- <p class="info"> <a href="#"><i class="fa fa-heart-o" onclick="btnClick()"></i></a></p> -->
-      <p class="info"><a><i id="{{this.id}}" class="fa fa-heart-o" onclick="btnClick({{this.id}})"></i></a></p>
+      {{#if this.saved}}
+        <p class="info"><a><i id="{{this.id}}" class="fa fa-heart" onclick="btnClick({{this.id}})"></i></a></p>
+        {{else}}
+        <p class="info"><a><i id="{{this.id}}" class="fa fa-heart-o" onclick="btnClick({{this.id}})"></i></a></p>
+      {{/if}}
     </div>
 
   <div class="photos">
