@@ -11,10 +11,13 @@
   justify-content: space-between;
   align-items: center;
 
+
 }
 .w3-animate-fading {
   font-size: 30px;
   color:white;
+  font-weight: bold;
+  text-shadow:1px 1px #FFEB3B;
 }
 
 @media (max-width: 500px)
@@ -65,6 +68,7 @@ font-weight: bold;
 .header a.active {
   color: white;
   font-style: italic;
+
 }
 
 .header-right {
@@ -80,6 +84,8 @@ ul {
 
 li {
     float: left;
+    font-weight: bold;
+    justify-content: space-between;
 }
 
 li a {
@@ -109,5 +115,6 @@ li a:hover {
   font-family: Roboto;
   font-size: 14px;
   color: white;
+  /* position: fixed; */
 
 }
