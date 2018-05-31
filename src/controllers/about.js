@@ -1,3 +1,9 @@
+
 module.exports = (req, res) => {
-  res.render('about', { style: 'about' });
+  let loggedIn;
+  res.render('about', {
+    style: 'about',
+    loggedIn: req.loggedIn,
+    userName: req.userName,
+  });
 };

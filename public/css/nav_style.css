@@ -1,6 +1,4 @@
-/* body {
-  background: #E3F2FD
-} */
+
 .header {
   overflow: hidden;
   padding: 10px 20px;
@@ -89,7 +87,6 @@ li {
     float: left;
 }
 
-<<<<<<< HEAD
 .navItems ul li {
   padding: 10px;
   margin:20px
@@ -118,9 +115,8 @@ li a:hover {
   left: 0px;
   bottom: 0px;
   margin-top:5PX;
-  font-family: Roboto;
+  /* font-family: Roboto; */
   font-size: 14px;
   color: white;
 
->>>>>>> 9edcdf7e67172e802d3dfc4e21343be71de089cb
 }

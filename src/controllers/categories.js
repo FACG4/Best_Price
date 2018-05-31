@@ -21,6 +21,8 @@ exports.getMen = (req, res) => {
     res.render('categories', {
       result: result.rows,
       style: 'categories',
+      loggedIn: req.loggedIn,
+      userName: req.userName,
     });
   }).catch(err => console.log(err));
 };
@@ -42,7 +44,12 @@ exports.getWomen = (req, res) => {
   query(command).then((result) => {
     res.render('categories', {
       result: result.rows,
-      style: 'categories',
+      loggedIn: req.loggedIn,
+      userName: req.userName,
     });
-  }).catch(err => console.log(err));
+  }).catch(err => res.status(500).send({
+    errorBody: err,
+    errorMessage: 'internal server error',
+
+  }));
 };
