@@ -2,6 +2,13 @@ const tape = require('tape');
 const query = require('../database/queries/query');
 const { sql, sqlBuilder } = require('../database/sql_commands')
 const supertest = require('supertest');
+const contactus = require('../database/queries/contactus');
+const dbBuilder= require('../database/db_build');
+const {savedFashion,saved} = require('../database/queries/savedFashion');
+const disconutValue = require('../database/queries/discount');
+// const { insertUsers, checkUsers } = require('../database/queries/signup');
+const signup = require('../controllers/signup');
+
 const app = require('../app');
 
 
@@ -14,7 +21,7 @@ tape('Select the rows that have disconut', (t) => {
 });
 
 tape('test contactus query', (t) => {
-  const email = 'marwa14@gmail.com';
+  const email = 'marw1a14@gmail.com';
   const name = 'Hello';
   const message = 'love your website';
 
@@ -42,7 +49,49 @@ tape('Getting signup', (t) => {
       t.equal(res.type, 'text/html', 'should return html');
       t.equal(res.statusCode, 200, 'should return statusCode 200');
 
->>>>>>> 23adc8fac5076b371ea7e1570a95892e047001cb
       t.end();
     });
 });
+// tape('ramy tester',e=>{
+//     dbBuilder();
+//
+//   savedFashion(3,(err,result)=>{
+//     e.equals(result.length,2,'ddddd')
+//     e.end()
+//   })
+// })
+tape('view saved items',e=>{
+  savedFashion(1,(err,result)=>{
+    e.equals(result[0].name,'Shirt','ddddd')
+    e.end()
+  })
+})
+tape('user not exist',e=>{
+  savedFashion(5000,(err,result)=>{
+    e.equals(result.length,0,'ddddd')
+    e.end()
+  })
+})
+tape('raise an error',e=>{
+  let error=false
+  savedFashion('ggfgvgv',(err,result)=>{
+    if(err){
+        error=true
+    }
+    e.equals(error,true,'ddddd')
+    e.end()
+})
+})
+
+tape('save proccess',(e)=>{
+  dbBuilder();
+  saved(3,1,(err, resultSaved)=>{
+    savedFashion(3, (err,result)=>{
+      console.log(result);
+      e.equals(result.length,2,'lkjhgg')
+    })
+
+    e.equals(resultSaved.rowCount,1,'ddddd')
+    e.end()
+  })
+})

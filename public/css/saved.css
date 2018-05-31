@@ -9,6 +9,9 @@ body {
   width: 90%;
   display: flex;
   align-self: center;
+  justify-content: space-between;
+  flex-wrap:wrap;
+
 }
 
 
@@ -34,14 +37,12 @@ body {
   color: #eae4ac;
   cursor: pointer;
 }
-<<<<<<< HEAD
 
-
-=======
->>>>>>> fdd7b30ad805dcb406d8d1453e4ce05a60e9284a
 .boxs {
   display: flex;
   margin-top: 25px;
+  margin-left: 25px;
+  margin-right: : 25px;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
@@ -52,6 +53,11 @@ body {
   flex-direction: column;
   align-items: center;
   flex: 1;
+}
+
+.imgE{
+  width: 250px;
+    height: 250px;
 }
 
 .innerbox {
@@ -67,6 +73,8 @@ body {
 .a {
   display: flex;
   justify-content: center;
+  width: 250px;
+  height: 250px;
 }
 
 .innerbox a img {
@@ -107,7 +115,7 @@ body {
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
-  border: 1px solid #888;
+  /* border: 1px solid #888; */
   width: 80%;
 }
 

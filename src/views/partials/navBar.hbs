@@ -2,5 +2,9 @@
   <li><a class="active" href="/Women">Women</a></li>
   <li><a href="/men">Men</a></li>
   <li><a href="/contactus" class="contact">Contact us</a></li>
+  <li><a href="/aboutus" >About</a></li>
+  {{#if loggedIn}}
+  <li><a href="/saved-fashion/{{this.id}}" >favorits</a></li>
+  {{/if}}
   <li><a href="/aboutus" >about</a></li>
 </ul>

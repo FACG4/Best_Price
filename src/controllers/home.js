@@ -13,6 +13,7 @@ exports.disconutValue = (req, res) => {
       result,
       loggedIn: req.loggedIn,
       userName: req.userName,
+      id: req.userId,
     });
   });
 };

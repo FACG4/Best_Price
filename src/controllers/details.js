@@ -21,6 +21,7 @@ exports.get = (req, res) => {
         details,
         loggedIn: req.loggedIn,
         userName: req.userName,
+        id: req.userId,
       });
     });
   });

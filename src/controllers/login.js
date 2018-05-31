@@ -9,7 +9,6 @@ exports.get = (req, res) => {
   res.render('login', { style: 'login', layout: 'second' });
 };
 
-
 exports.post = (req, res) => {
   const { username, password } = req.body;
 

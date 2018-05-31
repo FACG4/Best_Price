@@ -1,4 +1,12 @@
 const query = require('./queries/query');
-const { sql } = require('./sql_commands');
+const fs = require('fs');
+const path = require('path');
+const dbBuilder=()=>{
 
-query(sql.buildCommand).then().catch((err) => { throw new Error(err); });
+  const sql = fs.readFileSync(path.join(__dirname, 'db_build.sql')).toString();
+
+  query(sql).then().catch((err) => { throw new Error(err); });
+
+}
+
+module.exports = dbBuilder

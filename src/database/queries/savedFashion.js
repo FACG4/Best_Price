@@ -3,7 +3,7 @@ const dbconnection = require('../db_connection');
 const savedFashion = (userId, cb) => {
   const savedFashionSql = {
     text:
-      'select items.img, items.name, items.price, items.gender,items.id from items inner join saved on saved.items_id = items.id and user_id = $1',
+      'select items.img, items.name, items.price, items.gender,items.id from items inner join saved on saved.items_id = items.id and user_id = $1' ,
     values: [userId],
   };
   dbconnection.query(
