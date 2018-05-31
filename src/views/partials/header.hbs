@@ -3,14 +3,14 @@
 
 <div class="header">
   <a href="/" class="tweet"><p id="header_para" class="w3-animate-fading"><span id="best"><b>best</b></span><span id="price">Price</span></p>
-  
+
   <div class="header-right">
     {{#if loggedIn}}
         <a class="active" href="/">Welcome {{userName}}</a>
         <a class="active" href="/logout">Logout</a>
 
       {{else}}
-        <a class="active" href="/login">Login</a>
+        <a class="active" href="/login" id="login">Login</a>
         <a class="active" href="/signup">Sign Up</a>
       {{/if}}
   </div>
