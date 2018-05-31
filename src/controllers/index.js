@@ -36,3 +36,4 @@ router.get('/details/:id', details.get);
 
 
 module.exports = router;
+
