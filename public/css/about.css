@@ -1,0 +1,22 @@
+
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  text-align: center;
+
+}
+
+.clear {
+  clear: both;
+}
+.about{
+  padding: 20px;
+  text-align: center;
+   text-justify: inter-word;
+}
+
+.footer{
+  position: fixed;
+}

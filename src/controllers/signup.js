@@ -2,7 +2,7 @@ const { insertUsers, checkUsers } = require('./../database/queries/signup');
 const bcrypt = require('bcrypt');
 
 exports.get = (req, res) => {
-  res.render('signup', { style: 'login', layout: 'second' });
+  res.render('signup', { style: 'signup', layout: 'second' });
 };
 
 exports.post = (req, res, next) => {

@@ -25,9 +25,14 @@ function btnClick(id) {
   const p = document.getElementById('text');
   const modal = document.getElementById('myModal');
   const span = document.getElementById('close');
-  // const checked = document.getElementById('checked');
-
-  if (heart === 'fa fa-heart-o') {
+  const login = document.getElementById('login');
+  if (login) {
+    p.textContent = 'Login first';
+    modal.style.display = 'block';
+    span.onclick = () => {
+      modal.style.display = 'none';
+    };
+  } else if (heart === 'fa fa-heart-o') {
     save = true;
     elem.classList.remove('fa-heart-o');
     elem.classList.add('fa-heart');
@@ -48,7 +53,7 @@ function btnClick(id) {
             window.location.pathname = '/login';
           };
           window.onclick = (event) => {
-            if (event.target == modal) {
+            if (event.target === modal) {
               modal.style.display = 'none';
               window.location.pathname = '/login';
             }
@@ -105,7 +110,6 @@ function btnClick(id) {
     );
   }
 }
-
 function savedpage(id) {
   const elem = document.getElementById(id);
   const heart = elem.className;
