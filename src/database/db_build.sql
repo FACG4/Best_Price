@@ -1,6 +1,6 @@
 BEGIN;
 
-DROP TABLE IF EXISTS users, items, saved,contactus CASCADE;
+DROP TABLE IF EXISTS users, items, saved, contactus CASCADE;
 
  CREATE TABLE users(
    id SERIAL PRIMARY KEY,
@@ -45,14 +45,14 @@ message VARCHAR NOT NULL
 );
 
 INSERT INTO items(name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4)VALUES
-('Shirt','Mahdi','L',50,'Gaza','female','top',
+('Shirt','Mahdi','L',50,'Gaza','male','top',
   'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527581236/men1111.jpg',
   'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527581255/men11.jpg',
   'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527581255/men111.jpg',
   'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527581255/men1.jpg',
   'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527581236/men1111.jpg');
   INSERT INTO items(name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4)VALUES
-  ('Shirt','PosterMan','M',80,'Gaza','female','top',
+  ('Shirt','PosterMan','M',80,'Gaza','male','top',
     'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527581797/men2.jpg',
   'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527581797/men22.jpg',
   'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527581797/men22.jpg',
@@ -87,42 +87,56 @@ INSERT INTO items(name,shop_name,size,price,location,gender,class,img,views1,vie
       'https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-03.jpg',
       'https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-04.jpg');
       INSERT INTO items(name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4)VALUES
-      ('trousers','de facto','M',60,'Gaza','male','leg',
+      ('trousers','de facto','M',60,'Gaza','male','legs',
         'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527582644/men33.jpg',
         'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527582644/men333.jpg',
         'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527582643/men3333.jpg',
         'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527582643/men3.jpg',
         'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527582644/men33.jpg');
         INSERT INTO items(name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4)VALUES
-        ('trousers','de facto','S',70,'Gaza','male','leg',
+        ('trousers','de facto','S',70,'Gaza','male','legs',
           'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527583146/men4.jpg',
           'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527583146/men4444.jpg',
           'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527583147/men444.jpg',
           'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527583159/men44.jpg',
           'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527583146/men4.jpg');
           INSERT INTO items(name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4)VALUES
-        ('trousers','de facto','L',60,'Nusrirat','male','leg',
+        ('trousers','de facto','L',40,'Nusrirat','male','legs',
           'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527583543/men5.jpg',
           'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527583543/men55.jpg',
           'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527583543/men555.jpg',
           'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527583543/men5555.jpg',
           'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527583543/men5.jpg');
    INSERT INTO items (name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4)VALUES
-   ('Worker Jacket','White','S L M',50,'Gaza','female','Jacket',
+   ('Worker Jacket','White','S L M',50,'Gaza','female','top',
      'http://res.cloudinary.com/ddmnsmluf/image/upload/v1526909230/111412751060-05KH-mm6-vesteworker-01.jpg',
    'http://res.cloudinary.com/ddmnsmluf/image/upload/v1526909230/111412751060-05KH-mm6-vesteworker-01.jpg',
  'http://res.cloudinary.com/ddmnsmluf/image/upload/v1526909230/111412751060-05KH-mm6-vesteworker-01.jpg',
 'http://res.cloudinary.com/ddmnsmluf/image/upload/v1526909230/111412751060-05KH-mm6-vesteworker-01.jpg',
 'http://res.cloudinary.com/ddmnsmluf/image/upload/v1526909230/111412751060-05KH-mm6-vesteworker-01.jpg');
 INSERT INTO items (name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4)VALUES
-('shose','White','S L M',50,'Gaza','female','shose',
+('Shirt','White','S L M',50,'Gaza','male','top',
+  'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527066694/men-01.jpg',
+  'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527066710/viewmen1.jpg',
+  'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527066711/viewmen2.jpg',
+  'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527066709/viewmen3.jpg',
+  'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527066694/men-01.jpg');
+INSERT INTO items (name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4)VALUES
+('T-Shirt','White','S L M',50,'Gaza','male','top',
+  'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527067164/men2view2.jpg',
+  'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527067164/men2.jpg',
+  'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527067164/men1view1.jpg',
+  'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527067164/men2view.jpg',
+  'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527067164/men2view2.jpg');
+INSERT INTO items (name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4)VALUES
+('shose','White','S L M',50,'Gaza','female','shoes',
   'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527068282/shoseview1.jpg',
   'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527068281/shoseviews3.jpg',
   'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527068283/shoseview2.jpg',
   'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527068281/shoseviews4.jpg',
   'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527068281/shoseviews4.jpg');
 INSERT INTO items(name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4)VALUES
-('t-shirt1','shop1','small',100.12,'gaza','female','t-shirts',
+('t-shirt1','shop1','small',100.12,'gaza','male','top',
   'https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-01.jpg',
   'https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-01.jpg',
   'https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-02.jpg',
@@ -135,20 +149,19 @@ INSERT INTO items(name,shop_name,size,price,location,gender,class,img,views1,vie
   ,'https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-03.jpg'
   ,'https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-04.jpg'),
 ('t-shirt3','shop2','small',300.12,'gaza','male','t-shirts','https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-01.jpg','https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-01.jpg','https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-02.jpg','https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-03.jpg','https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-04.jpg'),
-('t-shirt4','shop3','x-larg',400.12,'gaza','female','t-shirts','https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-01.jpg','https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-01.jpg','https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-02.jpg','https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-03.jpg','https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-04.jpg'),
-('T_shirt','TurkeyStyle','M',50,'Gaza','Female','Top','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-01.jpg','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-01.jpg','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-02.jpg','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-03.jpg','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-04.jpg'),
-('jeans','BeElegentShop','L',50,'Rafah','Female','Legs','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-01.jpg','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-01.jpg','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-02.jpg','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-03.jpg','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-01.jpg');
+('t-shirt4','shop3','x-larg',400.12,'gaza','male','t-shirts','https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-01.jpg','https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-01.jpg','https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-02.jpg','https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-03.jpg','https://media.lexception.com/img/products/montlimart/11175568569-06BA-montlimart-chemisecolmontlimartmlenlin-04.jpg'),
+('T_shirt','TurkeyStyle','M',50,'Gaza','female','top','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-01.jpg','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-01.jpg','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-02.jpg','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-03.jpg','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-04.jpg'),
+('jeans','BeElegentShop','L',50,'Rafah','female','legs','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-01.jpg','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-01.jpg','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-02.jpg','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-03.jpg','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-01.jpg');
 INSERT INTO items (name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4)VALUES
-('T_shirt','White','S L M',0,'Gaza','female','shose',
+('T_shirt','White','S L M',0,'Gaza','female','shoes',
   'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527068282/shoseview1.jpg',
   'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527068281/shoseviews3.jpg',
   'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527068283/shoseview2.jpg',
   'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527068281/shoseviews4.jpg',
   'http://res.cloudinary.com/ddmnsmluf/image/upload/v1527068281/shoseviews4.jpg');
 INSERT INTO items (name,shop_name,size,price,location,gender,class,img,views1,views2,views3,views4) VALUES
-('T_shirt','TurkeyStyle','M',10,'Gaza','female','Top','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-01.jpg','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-01.jpg','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-02.jpg','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-03.jpg','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-04.jpg'),
+('T_shirt','TurkeyStyle','M',10,'Gaza','female','top','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-01.jpg','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-01.jpg','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-02.jpg','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-03.jpg','https://media.lexception.com/img/products/fabric-hc/11950957595-05ER-fabric-hc-zoe-04.jpg');
 
-('jeans','BeElegentShop','L',10,'Rafah','female','Legs','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-01.jpg','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-01.jpg','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-02.jpg','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-03.jpg','https://media.lexception.com/img/products/notify/111725959085-01BC-notify-jeanscaprihellebora-01.jpg');
 
 
 COMMIT;

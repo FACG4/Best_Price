@@ -1,11 +1,9 @@
 const tape = require('tape');
+const query = require('../database/queries/query');
+const { sql, sqlBuilder } = require('../database/sql_commands')
 const supertest = require('supertest');
-const contactus = require('../database/queries/contactus');
-const disconutValue = require('../database/queries/discount');
-// const { insertUsers, checkUsers } = require('../database/queries/signup');
-const signup = require('../controllers/signup');
-
 const app = require('../app');
+
 
 tape('Select the rows that have disconut', (t) => {
   disconutValue(12345, (err, result) => {
@@ -44,6 +42,7 @@ tape('Getting signup', (t) => {
       t.equal(res.type, 'text/html', 'should return html');
       t.equal(res.statusCode, 200, 'should return statusCode 200');
 
+>>>>>>> 23adc8fac5076b371ea7e1570a95892e047001cb
       t.end();
     });
 });
