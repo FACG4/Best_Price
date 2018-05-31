@@ -8,9 +8,10 @@
   {{#each savedFashion}}
 <div class="box">
   <div class="innerbox">
-    <a class="a" href="/details/{{this.id}}"><img src="{{this.img}}" alt="fashion"></a>
+    <a class="a" href="/details/{{this.id}}"><img class="imgE" src="{{this.img}}" alt="fashion"></a>
   </div>
   <p class="info">{{this.price}} NIS <a><i id="{{this.id}}" class="fa fa-heart" onclick="savedpage({{this.id}})"></i></a></p>
+  <p class="info">click to unsave<a><i id="{{this.id}}" class="fa fa-heart" onclick="savedpage({{this.id}})"></i></a></p>
   <div id="myModal" class="modal">
     <div class="modal-content">
       <span id="close" class="close">&times;</span>

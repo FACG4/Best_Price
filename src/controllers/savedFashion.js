@@ -19,9 +19,11 @@ exports.get = (req, res) => {
 
         return res.render('saved', {
           layout: 'main',
-          style: 'style',
+          style: 'saved',
           title: 'saved fashion',
           savedFashion,
+          loggedIn: req.loggedIn,
+          userName: req.userName,
         });
       });
     }

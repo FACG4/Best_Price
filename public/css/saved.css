@@ -11,13 +11,6 @@ body {
   align-self: center;
 }
 
-/* .containernav {
-  display: flex;
-  width: 1140px;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap; */
-}
 
 .bigContainer {
   display: flex;
@@ -25,20 +18,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* .header {
-  width: 100%;
-  height: 40px;
-  background-color: #752223;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.headerForm {
-  display: flex;
-  align-items: center;
-  align: left;
-  margin-right: 10px;
-} */
 
 .input {
   background-color: #742223;
@@ -54,83 +33,26 @@ body {
   color: #eae4ac;
   cursor: pointer;
 }
-
-/* .navbar {
-  display: flex;
-  padding-left: 15px;
-  padding-right: 15px;
-  height: 70px;
-  background-color: #fafafa;
-  align-items: center;
-  justify-content: center;
-}
-
-.navigationItems {
-  justify-content: center;
-}
-
-.navigationItems ul {
-  display: flex;
-  list-style-type: none;
-  justify-content: center;
-  padding: 0px;
-}
-
-.navigationItems a {
-  font-family: Roboto;
-  text-decoration: none;
-  color: #752223;
-  display: block;
-  padding: 18px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.navigationItems a:hover {
-  text-decoration: underline;
-}
-
-.navbar .logo {
-  width: 100px;
-  height: 50px;
-}
-
-.navbar .star {
-  width: 30px;
-}
-
-.navImg {
-  align-items: center;
-} */
-
-/* .footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  background-color: #752223;
-  right: 0px;
-  left: 0px;
-  bottom: 0px;
-  font-family: Roboto;
-  font-size: 14px;
-  color: white;
-  position: absolute;
-} */
-
 .boxs {
   display: flex;
   margin-top: 25px;
+  margin-left: 25px;
+  margin-right: : 25px;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
 
 .box {
   display: flex;
-  margin: 0 10px;
+  margin: 0 1px;
   flex-direction: column;
   align-items: center;
   flex: 1;
+}
+
+.imgE{
+  width: 250px;
+    height: 250px;
 }
 
 .innerbox {
@@ -146,6 +68,8 @@ body {
 .a {
   display: flex;
   justify-content: center;
+  width: 250px;
+  height: 250px;
 }
 
 .innerbox a img {
@@ -186,7 +110,7 @@ body {
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
-  border: 1px solid #888;
+  /* border: 1px solid #888; */
   width: 80%;
 }
 
