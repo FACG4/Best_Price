@@ -13,7 +13,7 @@ exports.getMen = (req, res) => {
   if (req.params.category === 'shoes') {
     command = sql.menShoes;
   }
-  if (req.params.category === 'acessories') {
+  if (req.params.category === 'access') {
     command = sql.menacc;
   }
 
@@ -35,7 +35,7 @@ exports.getWomen = (req, res) => {
   if (req.params.category === 'shoes') {
     command = sql.womenShoes;
   }
-  if (req.params.category === 'acessories') {
+  if (req.params.category === 'access') {
     command = sql.womenacc;
   }
 

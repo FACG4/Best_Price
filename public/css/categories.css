@@ -1,39 +1,79 @@
 .main {
-  background-color: cyan;
+  display: flex;
+  flex-direction: row;
+  background-color: ;
 }
 .filter {
   display: flex;
   flex-direction: column;
-  height: 400px;
+  height: max;
+  background-color: ;
+  width: 15%;
+  margin: 10px 30px;
 }
 
 .price-parent {
   display: flex;
-  width: 20%;
-  background-color: yellow;
+  background-color: ;
 }
 
 .size-parent {
   display: flex;
-  width: 20%;
-  background-color: green;
+  background-color: ;
 }
 
 .location-parent {
   display: flex;
-  width: 20%;
-  background-color: blue;
+  background-color: ;
 }
 
 .size-filter {
+  display: flex;
   flex-direction: column;
 
+}
+
+.price-filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.size-filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .location-filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.item-list {
+  padding: 10px 50px;
+  display: flex;
+}
+
+.image-container {
+  justify-content: space-around;
   background-color: white;
+}
+
+label {
+  display: flex;
   flex-direction: column;
 }
-.box {
-  flex-direction: column;
+
+img {
+  width: 250px;
+  height: 300px;
 }
