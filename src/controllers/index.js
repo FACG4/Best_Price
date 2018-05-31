@@ -26,19 +26,13 @@ router.get('/women', women.get);
 router.get('/aboutus', about);
 router.get('/contactus', contactus.get);
 router.post('/contactus', contactus.post);
-// router.get('/categories', categories.get);
+router.get('/men/:category/', categories.getMen);
+router.get('/women/:category/', categories.getWomen);
 router.get('/saved-fashion/:id', saved.get);
 router.post('/saved', saved.post);
 router.post('/unsaved', unsaved.post);
-router.get('categories/size', women.get);
-router.get('/categories', categories.get);
 router.get('/details', details.get);
 router.get('/details/:id', details.get);
-router.get('/women', women.get);
-router.get('/men', men.get);
-router.get('categories/size', women.get);
-router.get('/categories', categories.get);
-router.get('/logout', logout.get);
 
 
 module.exports = router;

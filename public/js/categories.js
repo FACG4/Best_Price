@@ -16,5 +16,4 @@
   listener(location.middle);
   listener(location.khan);
   listener(location.rafah);
-
-}(elements.price, elements.size, elements.location, elements.listener));
+}(elements.price, elements.size, elements.location, listener))

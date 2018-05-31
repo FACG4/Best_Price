@@ -1,55 +1,84 @@
 <section class="main">
 <div class="filter" id="filter">
-  <div class="price-filter">
+
+  <div class="div">
     <input type="checkbox" class="box" id="p1">
-    <input type="checkbox" class="box" id="p2">
-    <input type="checkbox" class="box" id="p3">
+    <label for="p1">0-50 NIS</label>
   </div>
 
-  <div class="price-labels">
-    <label for="p1">0-50 NIS</label>
+  <div class="div">
+    <input type="checkbox" class="box" id="p2">
     <label for="p2">50-100 NIS</label>
+  </div>
+
+  <div class="div">
+    <input type="checkbox" class="box" id="p3">
     <label for="p3">100+</label>
   </div>
 
-  <div class="size-filter">
-    <input type="checkbox" class="box" id="s4">
-    <input type="checkbox" class="box" id="s3">
-    <input type="checkbox" class="box" id="s2">
-    <input type="checkbox" class="box" id="s1">
-  </div>
 
-  <div class="size-labels">
-    <label for="s4">X-Large</label>
-    <label for="s3">Large</label>
-    <label for="s2">Medium</label>
-    <label for="s1">Small</label>
-  </div>
+<div class="div">
+  <input type="checkbox" class="box" id="s4">
+  <label for="s4">X-Large</label>
+</div>
 
-  <div class="location-filter">
-    <input type="checkbox" class="box" id="l1">
-    <input type="checkbox" class="box" id="l2">
-    <input type="checkbox" class="box" id="l3">
-    <input type="checkbox" class="box" id="l4">
-    <input type="checkbox" class="box" id="l5">
-  </div>
+<div class="div">
+  <input type="checkbox" class="box" id="s3">
+  <label for="s3">Large</label>
+</div>
 
-  <div class="location-labels">
-    <label for="l1">North Gaza</label>
-    <label for="l2">Gaza</label>
-    <label for="l3">Middle Governorate</label>
-    <label for="l4">Khan Younis</label>
-    <label for="l5">Rafah</label>
-  </div>
+<div class="div">
+  <input type="checkbox" class="box" id="s2">
+  <label for="s2">Medium</label>
+</div>
+
+<div class="div">
+  <input type="checkbox" class="box" id="s1">
+  <label for="s1">Small</label>
+</div>
+
+
+<div class="div">
+  <input type="checkbox" class="box" id="l1">
+  <label for="l1">North Gaza</label>
+</div>
+
+<div class="div">
+  <input type="checkbox" class="box" id="l2">
+  <label for="l2">Gaza</label>
+</div>
+
+<div class="div">
+  <input type="checkbox" class="box" id="l3">
+  <label for="l3">Middle Governorate</label>
+</div>
+
+<div class="div">
+  <input type="checkbox" class="box" id="l4">
+  <label for="l4">Khan Younis</label>
+</div>
+
+<div class="div">
+  <input type="checkbox" class="box" id="l5">
+  <label for="l5">Rafah</label>
+</div>
+
+
 
 </div>
 
 <div class="item-list" id="item-list">
   {{#each result}}
-    <img src = "{{this.img}}"></img>
+  <div class = "image-container">
+    <a href ="/details/{{this.id}}"><img src = "{{this.img}}"></img></a>
+    <h6 id="price-{{this.price}}">Price: {{this.price}}<h6>
+    <h6 id="size-{{this.size}}">Size: {{this.size}}<h6>
+    <h6 id="location-{{this.location}}">Shop Location: {{this.location}}<h6>
+
+  </div>
   {{/each}}
 </div>
 
 </section>
-<script src="./js/filter_elements.js"></script>
-<script src="./js/categories.js"></script>
+<script src="/js/filter_elements.js"></script>
+<script src="/js/categories.js"></script>

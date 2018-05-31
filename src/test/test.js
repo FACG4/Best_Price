@@ -1,4 +1,6 @@
 const tape = require('tape');
+const query = require('../database/queries/query');
+const { sql, sqlBuilder } = require('../database/sql_commands')
 const supertest = require('supertest');
 const contactus = require('../database/queries/contactus');
 const dbBuilder= require('../database/db_build');
@@ -8,6 +10,7 @@ const disconutValue = require('../database/queries/discount');
 const signup = require('../controllers/signup');
 
 const app = require('../app');
+
 
 tape('Select the rows that have disconut', (t) => {
   disconutValue(12345, (err, result) => {

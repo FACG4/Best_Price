@@ -1,6 +1,4 @@
-/* body {
-  background: #E3F2FD
-} */
+
 .header {
   overflow: hidden;
   padding: 10px 20px;
@@ -19,6 +17,13 @@
   font-weight: bold;
   text-shadow:1px 1px #FFEB3B;
 }
+
+
+.navImg .logo {
+  width: 80px;
+  height: 80px;
+  margin-left:20px;
+  margin-top: 10px
 
 @media (max-width: 500px)
 .header .w3-animate-fading{
@@ -88,6 +93,10 @@ li {
     justify-content: space-between;
 }
 
+.navItems ul li {
+  padding: 10px;
+  margin:20px
+=======
 li a {
     display: block;
     color: black;
@@ -112,7 +121,7 @@ li a:hover {
   left: 0px;
   bottom: 0px;
   margin-top:5PX;
-  font-family: Roboto;
+  /* font-family: Roboto; */
   font-size: 14px;
   color: white;
   /* position: fixed; */
